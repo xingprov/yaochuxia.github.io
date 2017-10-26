@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yaochuxia.github.io">
+  <title>2017前端面试常见问题 | 姚楚霞的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.html 题目 2.css题目 3.js题目">
+<meta name="keywords" content="前端面试常见问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017前端面试常见问题">
+<meta property="og:url" content="http://yaochuxia.github.io/2017/10/13/2017前端面试常见问题/index.html">
+<meta property="og:site_name" content="姚楚霞的博客">
+<meta property="og:description" content="1.html 题目 2.css题目 3.js题目">
+<meta property="og:updated_time" content="2017-10-26T05:03:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017前端面试常见问题">
+<meta name="twitter:description" content="1.html 题目 2.css题目 3.js题目">
+  
+    <link rel="alternative" href="/atom.xml" title="姚楚霞的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/timg.png">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/timg.png" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">姚楚霞</a></h1>
+		</hgroup>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yaochuxia" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="qq" target="_blank" href="/675993729" title="qq"><i class="icon-qq"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:675993729@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/timg.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">姚楚霞</h1>
+			</hgroup>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yaochuxia" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="qq" target="_blank" href="/675993729" title="qq"><i class="icon-qq"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:675993729@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-2017前端面试常见问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2017前端面试常见问题
+    </h1>
+  
+
+        
+        <a href="/2017/10/13/2017前端面试常见问题/" class="archive-article-date">
+  	<time datetime="2017-10-13T13:52:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 1.html 题目 2.css题目 3.js题目<br> <a id="more"></a></p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>1.DocType的作用？严格模式与混杂模式如何区分？它们有何意义?<br>  1.是一个标签（Document Type），用来声明标准通用标记语言的文档类型，就是要告诉解析器，应该使用什么样的文档类型定义来解析文档，也就是html的版本类型，必须放在所有的代码和标识之上。<br>  2.DTD的三种类型：<br>    2.1 –严格版本：禁止所有的表现层的标识和属性 presetational/deprecatedelements(例如font)以及frameset（框架的）标签；– 2.2 过渡版本：– 2.3 框架版本：<br>  3.标准模式：浏览器以其支持的最高标准呈现呈现页面；<br>  混杂模式：页面以一种比较宽松的向后兼容的方式显示，浏览器会根据 DOCTYPE是否存在来选择要使用的方法，如果没有DOCTYPE,那么就是以混杂模式呈现。</p>
+<p>2.HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？<br>  由于它放弃了与SGML的兼容，所以其实不需要在文档开头引用DTD,因为这个声明格式再当前所有的浏览器（IE,FF,OPERA,SAFAR等）下都会以标准模式渲染，而HTML5没有DTD,也就没有严格模式与宽松模式。</p>
+<p>3.行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？<br>  <b>行内：</b>width与height没有作用，只有padding（margin）-left与padding(margin)-right或者line-height有作用<code>&lt;br&gt;,&lt;span&gt;,&lt;a&gt;,&lt;b&gt;,&lt;button&gt;,&lt;em&gt;,&lt;i&gt;,&lt;iframe&gt;,&lt;img&gt;,&lt;input&gt;,&lt;label&gt;,&lt;map&gt;,&lt;select&gt;</code>,<br>  <b>块级：</b><code>&lt;div&gt;,&lt;p&gt;,&lt;caption&gt;,&lt;dd&gt;,&lt;dl&gt;,&lt;dt&gt;,&lt;form&gt;,&lt;h1&gt;,&lt;h…&gt;,&lt;hr&gt;,&lt;li&gt;,&lt;ol&gt;,&lt;ul&gt;,&lt;pre&gt;,&lt;table&gt;,&lt;td&gt;,&lt;th&gt;,&lt;thead&gt;,&lt;tr&gt;</code><br>  1.块级元素各自占一行，垂直方向排列，可以包含行级元素和块级元素，行级元素可以转换为块级元素：display:block;<br>  2.行内元素：会在水平方向排列，不能包含块级元素，设置width无效，height无效(可以设置line-height)，margin上下无效，padding上下无效。<br>  3.(Q2) 兼容性：display:inline-block;display:inline;zoom:1;<br>  4.空元素:没有内容的标签，<br>就是没有关闭标签的空元素<br>  <b>空元素：</b><code>&lt;/b&gt;&lt;br/&gt;&lt;hr&gt;,&lt;input&gt;&lt;img&gt;&lt;meta&gt;,&lt;link&gt;</code></p>
+<p>4.页面导入样式时，使用link和@import有什么区别？<br>  Link:XHTML标签；除了可以加载CSS外，还可以定义RSS，定义rel的链接属性；当页面被加载的时候，link使用的CSS会同时被加载，故浏览者浏览的时候，会有样式；<br>  @import:是css提供的一种方式；只有当所有的界面都被下载完才会加载，所以用这个的时候，有的时候开始会没有样式；<br>  老的浏览器不会支持只有在IE5以上才会支持。使用dom不可以控制@import</p>
+<p>5.介绍一下你对浏览器内核的理解？<br>  就是解释引擎，负责对网页语法的解释并渲染（显示）网页，决定了如何显示网页的内容以及页面的格式。就是兼容性的问题。</p>
+<p>6.常见的浏览器内核有哪些？<br>  Trident内核—IE<br>  Gecko内核—FireFox（该内核的特点就是 开源，javascript的引擎是SpiderMonkey。）<br>  Webkit内核—safari以及chrome的原生内核。Google Chrome、360极速浏览器以及搜狗高速浏览器高速模式都是这个内核。<br>  Blink-chrome（28及以后版本）的最新内核<br>  Presto内核–opera浏览器</p>
+<p>7.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？<br>  1.正则验证：<code>&lt;input type=&quot;email&quot; pattern=&quot;[^ @]*@[^ @]*&quot; value=&quot;&quot;&gt;</code>无需后台检测，即可检验<br>  2.Dataliat属性：可以实现自动补全机制，不用jqury再去实现。<code>&lt;input list=&quot;jslib&quot; name=&quot;jslib&quot; &gt;　　&lt;datalist id=&quot;jslib&quot;&gt;</code><br>  3.下载特性：允许强制下载文件：　<code>&lt;a href=&quot;download_pdf.php&quot; download=&quot;somefile.pdf&quot;&gt;下载PDF文件&lt;/a&gt;</code><br>  4.用于绘画的 canvas 元素代替了Flash<br>  拖拽释放(Drag and drop) API<br>  语义化更好的内容标签（header,nav,footer,aside,article,section）<br>  音频、视频API(audio,video)<br>  画布(Canvas) API<br>  地理(Geolocation) API<br>  本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；<br>  sessionStorage 的数据在浏览器关闭后自动删除<br>  新的技术webworker, websocket, Geolocation<br>  5.用于媒介回放的 video 和 audio 元素、<br>  6.对本地离线存储的更好的支持、<br>  7.新的特殊内容元素，比如 <code>article、footer、header、nav、section、新的表单控件，比如 calendar、date、time、email、url、search</code>。<br>  8.新增了<code>&lt;menu&gt;</code>可以被用于创建传统的菜单，也可以用于工具栏和上下文菜单。<code>&lt;figure&gt;</code>标签使得网页文字和图片的排版更专业。<br>  删除了： <code>&lt;b&gt;、&lt;font&gt;、&lt;frame&gt;、&lt;center&gt;、&lt;big&gt;</code><br>  支持HTML5新标签：</p>
+<ul>
+<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签，<br>可以利用这一特性让这些浏览器支持HTML5新标签，<br>浏览器支持新标签后，还需要添加标签默认的样式：</li>
+<li><p>当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if lt IE 9]&gt; </div><div class="line"> &lt;script&gt; src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt; </div><div class="line"> &lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>区分：H5简化了很多语法；例如Doctype的声明。</p>
+</li>
+</ul>
+<p>8.简述一下你对HTML语义化的理解？<br>  标签语义化就是让你更好的理解标签的含义:比如h1-6就是很明显的定义标题；就是让页面的内容结构化，便于解析；便于阅读和理解。<br>  其实就是让你用正确的标签做正确的事情；先了解模块在页面中的职能，后编写代码。</p>
+<p>9.HTML5的离线储存怎么使用，工作原理能不能解释一下？<br>  通过Manifest; Manifest是一个简单的 文本文件，它的扩展名是任意 的，定义需要缓存的文件、资源，当第一次打开时，浏览器会自动缓存相应的资源。<br>  Manifest 的特点：<br>  离线浏览：即当网络断开时，可以继续访问你的页面。<br>  访问速度快：将文件缓存到本地，不需每次都从网络上请求。<br>  稳定性：做了Manifest缓存，遇到突发网络故障或者服务器故障，继续访问本地缓存。<br>  使用：<br>  首先创建一个和html同名的manifest文件，比如页面为index.html，那么可以建一个index.manifest的文件，然后给index.html的html标签添加如下属性即可：<br>  或<br>  1、manifest 的引入可以使绝对路径也可以是相对路径<br>  2、manifest文件你可以保存为任意的扩展名，但mine-type 必须是 text/cache-manifest。<br>  3、manifest 标签应该包含到你需要缓存资源的页面，当第一次打开该页面时，浏览器会解析该页面中的mainfest，并缓存里面列举的资源，同时该页面也会自动会被浏览器缓存，即使该页面没有在Manifest中列出。<br>  4、HTML5缓存可以做到以下几点：1&gt;实现图片存在客户端；2&gt;实现跨域共享客户端缓存；3&gt;做到真正的离线访问WEB应用；4&gt;实现客户端的数据库。<br>  在H5之前，是由cookie实现客户端的缓存，将缓存信息带在HTTP请求头上，大小只有4k，会造成Domain污染H5的几种存储形式：<br>  1&gt;本地存储(localstorage &amp;&amp; sessionstorage)：<br>  存储形式：key–&gt;value过期时间：永久存储，永不失效，除非手动删除 大小：官方给出的文档是每个域名5M，所以需要抛出异常处理<br>  浏览器支持情况：IE8+、Firefox、Safari3.2+、Chrome、Opera<br>  使用方法：localstorage API介绍,resource里面看，<br>  在console里面操作<br>  1.getItem:取 localstorage记录 setItem:设置 removeItem:移除key:去拿一个索引 clear:删掉，清除（这个是删除掉了全部）<br>  H5可以存储的东东：数组、json数据、图片、脚本、样式文件<br>  原理：<br>  HTML5的离线存储是基于一个新建的.appcache文件的，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
+<p>9.浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？<br>  当第一次打开该页面时，浏览器会解析该页面中的mainfest，并缓存里面列举的资源，同时该页面也会自动会被浏览器缓存，即使该页面没有在Manifest中列出。<br>  更新缓存的方式：<br>  更新manifest文件<br>  通过javascript操作<br>  清除浏览器缓存</p>
+<p>10.请描述一下 cookies，sessionStorage 和 localStorage 的区别？<br>  Cookie:（不能超过4k）始终在同源的Http请求中携带（即使不需要），他在浏览器和服务器之间来回传递；后两者均只在本地保存，不会自动发给服务器；只在设置的过期时间之前有用；所有同源窗口之间使用。<br>  SessionStorge:缓存存储,存储范围大。所有的同源窗口之间共享。<br>  LocalStrage:本地存储，仅在同浏览器，同浏览页面共享。</p>
+<p>11.iframe有那些缺点？<br>  优点：1.重载页面的时候不需要重载整个页面，只需要重载页面中的一个框架页增加网页的传输速度；一般用于制作导航栏的时候使用—–现在由于他的缺点，已经使用ajax代替它实现了；<br>  iframe的缺点：<br>  1.会产生很多页面，不容易管理<br>  2.代码过于复杂，不太容易被浏览器的引擎解析；<br>  3.iframe会阻塞主页面的Onload事件，即时内容为空，加载也需要时间；</p>
+<p>12.Label的作用是什么？是怎么用的？（加 for 或 包裹）<br>  Label:用来给 input 元素定义标注（标记）。不会呈现出来任何的效果，一般可用来在该标签内点击文本，然后会触发此控件。<br>  标签的 for 属性应当与相关元素的 id 属性相同。<br>  用法：<code>&lt;form&gt;
+        &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot; /&gt;
+        &lt;/form&gt;</code></p>
+<p>13.HTML5的form如何关闭自动完成功能？<br>  自动完成功能就是：当你在文本框输入时，浏览器会根据历史纪录，提醒您，但有的时候我们要通过ajax来操作：所以需要关闭该功能<br>  1、在IE的Internet选项菜单里的内容–自动完成里面设置<br>  2、设置Form的autocomplete为”on”或者”off”来开启或者关闭自动完成功能<br>  3、设置输入框的autocomplete为”on”或者”off”来开启或者关闭该输入框的自动完成功能</p>
+<p>14.如何实现浏览器内多个标签页之间的通信? (阿里)<br>  使用cookie，localstorage.</p>
+<p>15.webSocket如何兼容低浏览器？(阿里)<br>  引用WebSocket.js这个文件来兼容低版本浏览器，WebSocket.swf需 要放在与页面相同的目录下。</p>
+<p>16.页面可见性（Page Visibility）API 可以有哪些用途？<br>  当可见性发生了改变的时候，会触发 visibilityState事件，通过给事件注册一个监听函数，那么就可以进行一些操作：即能够在页面切换到不可见状态时暂停执行一些不必要的操作,以减少资源的浪费.<br>  比如当前页面在播放动画，检测到用户切换了或者最小化了该窗口，则自动停止；<br>  有的程序会及时刷新访问界面（比如篮球比赛时的比分更新），若窗口关闭，他也会停止刷新；</p>
+<p>17.如何在页面上实现一个圆形的可点击区域？</p>
+<ol>
+<li><p>map+area</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"t.jpg"</span> <span class="attr">width</span>=<span class="string">"1366"</span> <span class="attr">height</span>=<span class="string">"768"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">usemap</span>=<span class="string">"#Map"</span> /&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"Map"</span> <span class="attr">id</span>=<span class="string">"Map"</span>&gt;</span>  </div><div class="line"> <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"821,289,68"</span> <span class="attr">href</span>=<span class="string">"www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> /&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>使用Dreamweaver制作热点会变得非常的容易，最终会形成上面的代码，具体的操作，可以参考视频，<a href="http://www.chuanke.com/3885380-190205.html。" target="_blank" rel="external">http://www.chuanke.com/3885380-190205.html。</a></p>
+</li>
+<li><p>border-radius（H5）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> <span class="selector-class">.disc</span>&#123;  </div><div class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;  </div><div class="line">    <span class="attribute">height</span>:<span class="number">100px</span>;  </div><div class="line">    <span class="attribute">background-color</span>:dimgray;  </div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;  </div><div class="line">    <span class="attribute">cursor</span>: pointer;  </div><div class="line">    <span class="attribute">position</span>: absolute;  </div><div class="line">    <span class="attribute">left</span>:<span class="number">50px</span>;  </div><div class="line">    <span class="attribute">top</span>:<span class="number">50px</span>;    </div><div class="line">    <span class="attribute">line-height</span>: <span class="number">100px</span>;  </div><div class="line">    <span class="attribute">text-align</span>: center;  </div><div class="line">    <span class="attribute">color</span>: white;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>纯js实现<br>需要求一个点在不在圆上简单算法、获取鼠标坐标等等<br>|AB|=Math.abs(Math.sqrt(Math.pow(X2-X1),2)+Math.pow(Y2-Y1,2)))<br>Math.abs()求绝对值<br>Math.pow(底数,指数)<br>Math.sqrt()求平方根</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;  </div><div class="line">    <span class="keyword">var</span> r=<span class="number">50</span>;<span class="comment">//圆的半径  </span></div><div class="line"><span class="keyword">var</span> x1=<span class="number">100</span>,y1=<span class="number">100</span>,x2= e.clientX;y2= e.clientY;  </div><div class="line"><span class="comment">//计算鼠标点的位置与圆心的距离  </span></div><div class="line">    <span class="keyword">var</span> len=<span class="built_in">Math</span>.abs(<span class="built_in">Math</span>.sqrt(<span class="built_in">Math</span>.pow(x2-x1,<span class="number">2</span>)+<span class="built_in">Math</span>.pow(y2-y1,<span class="number">2</span>)));  </div><div class="line">    <span class="keyword">if</span>(len&lt;=<span class="number">50</span>)&#123;  </div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"内"</span>)  </div><div class="line">    &#125;<span class="keyword">else</span>&#123;  </div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"外"</span>)  </div><div class="line">    &#125;  </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>18.实现不使用 border   画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#line</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">1000px</span>;</div><div class="line">    <span class="attribute">height</span>:<span class="number">1px</span>;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#3ecdb5</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&lt;div id=“line”&gt;&lt;/div&gt;</code></p>
+<p>19.网页验证码是干嘛的，是为了解决什么安全问题？<br>  验证码是为了防止一些人使用软件恶意注册、发帖等行为而设的。<br>  它的存在是为了确保登陆网站的是一个坐在电脑面前的真人，而不是一个自动登陆的软件</p>
+<p>20.title与h1的区别、b与strong的区别、i与em的区别？<br>  title是网站的标题；一般显示在网页的头部，在便签内；<br>  而”h1”是标题：用来设置文章等的标题。是网页的内容，显示在页面中；</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>1.介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同的？<br>  由四个属性组成的外边距(margin)、内边距(padding)、边界(border)、内容区(width和height);<br>  标准的CSS盒子模型和低端IE CSS盒子模型不同：宽高不一样<br>　标准的css盒子模型宽高就是内容区宽高；<br>　低端IE css盒子模型宽高 内边距﹢边界﹢内容区；</p>
+<p>2.CSS选择符有哪些？哪些属性可以继承？<br>    1.id选择器（ # myid）<br>    2.类选择器（.myclassname）<br>    3.标签选择器（div, h1, p）<br>    4.相邻选择器（h1 + p）<br>    5.子选择器（ul &gt; li）<br>    6.后代选择器（li a）<br>    7.通配符选择器（ * ）<br>    8.属性选择器（a[rel = “external”]）<br>    9.伪类选择器（a: hover, li:nth-child）</p>
+<ul>
+<li>可继承的样式： font-size font-family color, text-indent;</li>
+<li>不可继承的样式：border padding margin width height ;</li>
+<li>优先级就近原则，同权重情况下样式定义最近者为准;</li>
+<li>载入样式以最后载入的定位为准;</li>
+</ul>
+<p>3.CSS优先级算法如何计算？<br>  !important &gt;  id &gt; class &gt; tag<br>   important 比 内联优先级高,但内联比 id 要高</p>
+<p>4.CSS3新增伪类有那些？<br>  p:first-of-type 选择属于其父元素的首个 <code>&lt;p&gt; 元素的每个 &lt;p&gt; 元素</code>。<br>  p:last-of-type  选择属于其父元素的最后 <code>&lt;p&gt; 元素的每个 &lt;p&gt;</code> 元素。<br>  p:only-of-type  选择属于其父元素唯一的 <code>&lt;p&gt; 元素的每个 &lt;p&gt;</code> 元素。<br>  p:only-child    选择属于其父元素的唯一子元素的每个 <code>&lt;p&gt;</code> 元素。<br>  p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <code>&lt;p&gt;</code> 元素。<br>  :enabled  :disabled 控制表单控件的禁用状态。<br>  :checked        单选框或复选框被选中。</p>
+<p>5.如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？<br>  div居中 <code>margin-left=auto；margin-right=auto；</code><br>  居中浮动元素 外包装块<code>float：left；position：relative；left：50%</code>;<br>            内部块<code>float：left；position：relative；right：50%</code>;<br>  绝对定位div居中<br>  方法一<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#element</span> &#123;</div><div class="line">   <span class="attribute">width</span>: <span class="number">600px</span>; <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">   <span class="attribute">position</span>: absolute; <span class="attribute">left</span>: <span class="number">50%</span>; <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">   <span class="attribute">margin-top</span>: -<span class="number">200px</span>;    <span class="comment">/* 高度的一半 */</span></div><div class="line">   <span class="attribute">margin-left</span>: -<span class="number">300px</span>;    <span class="comment">/* 宽度的一半 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  方法二<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">   <span class="attribute">width</span>: <span class="number">600px</span>; <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">   <span class="attribute">position</span>: absolute; <span class="attribute">left</span>: <span class="number">50%</span>; <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">   <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);   <span class="comment">/* 第一个50%为width的一半，第二个50%为height的一半 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  方法三<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  <span class="selector-class">.element</span> &#123;</div><div class="line">   <span class="attribute">width</span>: <span class="number">600px</span>; <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">   <span class="attribute">position</span>: absolute; <span class="attribute">left</span>: <span class="number">0</span>; <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">right</span>: <span class="number">0</span>; <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">   <span class="attribute">margin</span>: auto;    <span class="comment">/* 水平和垂直都居中 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>若只设置“margin-left:auto”+“margin-right:auto”,则仅水平居中；<br>若只设置“margin-top:auto”+“margin-bottom:auto”,则仅垂直居中；</p>
+<p>6.display有哪些值？说明他们的作用。<br>  display 的属性值有：none|inline|block|inline-block|list-item|run-in|table|inline-table|table-row-group|table-header-group|table-footer-group|table-row|table-column-group|table-column|table-cell|table-caption|inherit<br>  其中常用的的有none、inline、block、inline-block。分别的意思是：<br>  1、none： 元素不会显示，而且改元素现实的空间也不会保留。但有另外一个 visibility: hidden， 是保留元素的空间的。<br>  2、inline： display的默认属性。将元素显示为内联元素，元素前后没有换行符。我们知道内联元素是无法设置宽高的，所以一旦将元素的display 属性设为 inline， 设置属性height和width是没有用的。此时影响它的高度一般是内部元素的高度（font-size）和padding。<br>  3、block： 将元素将显示为块级元素，元素前后会带有换行符。设置为block后，元素可以设置width和height了。元素独占一行。<br>  4、inline-block：行内块元素。这个属性值融合了inline 和 block 的特性，即是它既是内联元素，又可以设置width和height。</p>
+<p>7.position的值relative和absolute定位原点是？<br>  relative（相对定位）：定位原点是元素本身所在位置；<br>  absolute（绝对定位）：定位原点是离自己这一级元素最近的一级position设置为absolute或者relative的父元素的左上角为原点的</p>
+<p>8.css3<br>  1.CSS3的选择器<br>  1）E:last-child 匹配父元素的最后一个子元素E。<br>  2）E:nth-child(n)匹配父元素的第n个子元素E。<br>  3）E:nth-last-child(n) CSS3 匹配父元素的倒数第n个子元素E。</p>
+<ol>
+<li><p>@Font-face 特性<br>Font-face 可以用来加载字体样式，而且它还能够加载服务器端的字体文件，让客户端显示客户端所没有安装的字体。<br>@font-face {<br>  font-family: BorderWeb;<br>  src:url(BORDERW0.eot);<br>}<br>@font-face {<br>  font-family: Runic;<br>  src:url(RUNICMT0.eot);<br>}<br>.border { FONT-SIZE: 35px; COLOR: black; FONT-FAMILY: “BorderWeb” }<br>.event { FONT-SIZE: 110px; COLOR: black; FONT-FAMILY: “Runic” }<br>淘宝网字体使用<br> [css] view plain copy</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;  </div><div class="line">   <span class="attribute">font-family</span>: iconfont;  </div><div class="line">   <span class="attribute">src</span>: <span class="built_in">url</span>(//at.alicdn.com/t/font_1465189805_4518812.eot);                </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>3.圆角<br>border{border-radius:15px;}<br>4.多列布局 （multi-column layout）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mul-col"</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>新手上路<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>新手专区 消费警示 交易安全 24小时在线帮助 免费开店<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>付款方式<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>快捷支付 信用卡 余额宝 蚂蚁花呗 货到付款<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>淘宝特色<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>手机淘宝 旺信 大众评审 B格指南<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.mul-col</span>&#123;  </div><div class="line">  <span class="attribute">column-count</span>: <span class="number">3</span>;  </div><div class="line">  <span class="attribute">column-gap</span>: <span class="number">5px</span>;  </div><div class="line">  <span class="attribute">column-rule</span>: <span class="number">1px</span> solid gray;  </div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;  </div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid gray;  </div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>   ;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>5.阴影（Shadow） </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.css</span>&#123;<span class="attribute">text-shadow</span>:<span class="number">5px</span> <span class="number">2px</span> <span class="number">6px</span> <span class="built_in">rgba</span>(64, 64, 64, 0.5);&#125;</div></pre></td></tr></table></figure>
+<p>6.渐变</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:-webkit-gradient(linear</span>,0% 0%,100% 0%,<span class="selector-tag">from</span>(<span class="selector-id">#2A8BBE</span>),<span class="selector-tag">to</span>(<span class="selector-id">#FE280E</span>));</div></pre></td></tr></table></figure>
+<p>7.css弹性盒子模型</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"boxcontainer"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  <span class="selector-class">.boxcontainer</span> &#123;   </div><div class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;   </div><div class="line">  <span class="attribute">display</span>: -webkit-box;   </div><div class="line">  <span class="attribute">display</span>: -moz-box;   </div><div class="line">  <span class="attribute">-webkit-box-orient</span>: horizontal;   </div><div class="line">  <span class="attribute">-moz-box-orient</span>: horizontal;   </div><div class="line">&#125;   </div><div class="line">            </div><div class="line"> <span class="selector-class">.item</span> &#123;   </div><div class="line">    <span class="attribute">background</span>: <span class="number">#357c96</span>;   </div><div class="line">    <span class="attribute">font-weight</span>: bold;   </div><div class="line">    <span class="attribute">margin</span>: <span class="number">2px</span>;   </div><div class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;   </div><div class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;   </div><div class="line">    <span class="attribute">font-family</span>: Arial, sans-serif;   </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>8.CSS3制作特效<br>1) Transition 对象变换时的过渡效果<br>transition-property 对象参与过渡的属性<br>transition-duration 过渡的持续时间<br>transition-timing-function 过渡的类型<br>transition-delay 延迟过渡的时间<br>缩写方式：<br><code>transition:border-color .5s ease-in .1s, background-color .5s ease-in .1s, color .5s ease-in .1s;</code><br>拆分方式：<br>transition-property:border-color, background-color, color;<br>transition-duration:.5s, .5s, .5s;<br>transition-timing-function:ease-in, ease-in, ease-in;<br>transition-delay:.1s, .1s, .1s;<br>示例代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.main</span>&#123;  </div><div class="line">    <span class="attribute">position</span>: relative;  </div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;  </div><div class="line">    <span class="attribute">height</span>:<span class="number">45px</span>;  </div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;  </div><div class="line">    <span class="attribute">background-color</span>:lightgray;  </div><div class="line">    <span class="attribute">transition</span>:background-color .<span class="number">6s</span> ease-in <span class="number">0s</span>;  </div><div class="line">&#125;  </div><div class="line"><span class="selector-class">.main</span><span class="selector-pseudo">:hover</span>&#123;  </div><div class="line">    <span class="attribute">background-color</span>: dimgray;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2) Transforms 2D转换效果<br>主要包括 translate（水平移动）、rotate（旋转）、scale（伸缩）、skew（倾斜）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">   .main&#123;  </div><div class="line">    position: relative;  </div><div class="line">    top:200px;  </div><div class="line">    margin: 0 auto;  </div><div class="line">    height:45px;  </div><div class="line">    width: 300px;  </div><div class="line">    background-color:dimgray;  </div><div class="line">    transition:transform .6s ease 0s;  </div><div class="line">    transform: rotate(0deg);  </div><div class="line">&#125;  </div><div class="line">.main:hover&#123;  </div><div class="line">    transform: rotate(180deg);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>3) Animation动画特效 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.main</span>&#123;  </div><div class="line">    <span class="attribute">position</span>: absolute;  </div><div class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;  </div><div class="line">    <span class="attribute">top</span>:<span class="number">200px</span>;  </div><div class="line">    <span class="attribute">height</span>:<span class="number">45px</span>;  </div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;  </div><div class="line">    <span class="attribute">background-color</span>:cadetblue;  </div><div class="line">&#125;  </div><div class="line"><span class="selector-class">.main</span><span class="selector-pseudo">:hover</span>&#123;  </div><div class="line">    <span class="attribute">animation</span>: animations <span class="number">2s</span> ease <span class="number">0s</span>;  </div><div class="line">&#125;  </div><div class="line">@<span class="keyword">keyframes</span> animations &#123;  </div><div class="line">    0%&#123;  </div><div class="line">        <span class="attribute">left</span>: <span class="number">10px</span>;  </div><div class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;  </div><div class="line">    &#125;  </div><div class="line">    50%,70%&#123;  </div><div class="line">        <span class="attribute">left</span>: <span class="number">50%</span>;  </div><div class="line">        <span class="attribute">opacity</span>: .<span class="number">7</span>;  </div><div class="line">        <span class="attribute">margin-left</span>:-<span class="number">150px</span>;  </div><div class="line">    &#125;  </div><div class="line">    100%&#123;  </div><div class="line">        <span class="attribute">left</span>: <span class="number">100%</span>;  </div><div class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;  </div><div class="line">        <span class="attribute">margin-left</span>:-<span class="number">300px</span>;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>9.请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？<br>一个用于页面布局的全新CSS3功能，Flexbox可以把列表放在同一个方向（从上到下排列，从左到右），并让列表能延伸到占用可用的空间。<br>较为复杂的布局还可以通过嵌套一个伸缩容器（flex container）来实现。<br>采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。<br>它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。<br>常规布局是基于块和内联流方向，而Flex布局是基于flex-flow流可以很方便的用来做局中，能对不同屏幕大小自适应。<br>在布局上有了比以前更加灵活的空间。<br>具体：<a href="http://www.w3cplus.com/css3/flexbox-basics.html" target="_blank" rel="external">http://www.w3cplus.com/css3/flexbox-basics.html</a></p>
+<p>10.用纯CSS创建一个三角形的原理是什么？<br>把上、左、右三条边隐藏掉（颜色设为 transparent）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span> &#123;</div><div class="line"><span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">border-width</span>: <span class="number">20px</span>;</div><div class="line"><span class="attribute">border-style</span>: solid;</div><div class="line"><span class="attribute">border-color</span>: transparent transparent red transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>11.一个满屏 品 字布局 如何设计?<br>上面的div宽100%，<br>下面的两个div分别宽50%，<br>然后用float或者inline使其不换行即可</p>
+<p>12.常见兼容性问题？<br>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.<br>浏览器默认的margin和padding不同。解决方案是加一个全局的{margin:0;padding:0;}来统一。<br>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。<br>浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}<br>这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——<em>display:inline;将其转化为行内属性。(</em>这个符号只有ie6会识别)<br>渐进识别的方式，从总体中逐渐排除局部。<br>首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。<br>接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.bb</span>&#123;</div><div class="line">background-color:red;/所有识别/</div><div class="line">background-color:#00deff\9; /IE6、7、8识别/</div><div class="line">+background-color:#a200ff;/IE6、7识别/</div><div class="line">_background-color:#1e0bd1;/IE6识别/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>IE下,可以使用获取常规属性的方法来获取自定义属性,<br>也可以使用getAttribute()获取自定义属性;<br>Firefox下,只能使用getAttribute()获取自定义属性。<br>解决方法:统一通过getAttribute()获取自定义属性。<br>IE下,even对象有x,y属性,但是没有pageX,pageY属性;<br>Firefox下,event对象有pageX,pageY属性,但是没有x,y属性。<br>解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。<br>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,<br>可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。<br>超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:<br>L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}</p>
+</li>
+</ol>
+<p>13.li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？<br>    行框的排列会受到中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，占据空间，所以会有间隔，把字符大小设为0，就没有空格了。</p>
+<p>14.为什么要初始化CSS样式。<br>    因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br>    当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br>    最简单的初始化方法： <code>{padding: 0; margin: 0;}</code> （强烈不建议）<br>    淘宝的样式初始化代码：<br>    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }<br>    body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }<br>    h1, h2, h3, h4, h5, h6{ font-size:100%; }<br>    address, cite, dfn, em, var { font-style:normal; }<br>    code, kbd, pre, samp { font-family:couriernew, courier, monospace; }<br>    small{ font-size:12px; }<br>    ul, ol { list-style:none; }<br>    a { text-decoration:none; }<br>    a:hover { text-decoration:underline; }<br>    sup { vertical-align:text-top; }<br>    sub{ vertical-align:text-bottom; }<br>    legend { color:#000; }<br>    fieldset, img { border:0; }<br>    button, input, select, textarea { font-size:100%; }<br>    table { border-collapse:collapse; border-spacing:0; }</p>
+<p>15.absolute的containing block计算方式跟正常流有什么不同？<br>  无论属于哪种，都要先找到其祖先元素中最近的 position 值不为 static 的元素，然后再判断：<br>  1、若此元素为 inline 元素，则 containing block 为能够包含这个元素生成的第一个和最后一个 inline box 的 padding box (除 margin, border 外的区域) 的最小矩形；<br>  2、否则,则由这个祖先元素的 padding box 构成。<br>  如果都找不到，则为 initial containing block。<br>  补充：<br>  static(默认的)/relative：简单说就是它的父元素的内容框（即去掉padding的部分）<br>  absolute: 向上找最近的定位为absolute/relative的元素<br>  fixed: 它的containing block一律为根元素(html/body)，根元素也是initial containing<br>  block</p>
+<p>16.CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？<br>  对于一般的元素，它的表现跟display:hidden是一样的。<br>  但例外的是，如果这个元素是table相关的元素，例如table行，table group，table列，table column group，它的表现却跟display: none一样，也就是说，它们占用的空间也会释放。<br>  在谷歌浏览器里，使用collapse值和使用hidden值没有什么区别。<br>  在火狐浏览器、Opera和IE11里，使用collapse值的效果就如它的字面意思：table的行会消失，它的下面一行会补充它的位置。</p>
+<p>17.position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？<br>  position控制元素是否在文档流中，static和relative都存在于文档流，fixed直接脱离文档流锁定在以整个文档为offsetParent的位置，而absolute也是直接脱离文档流锁定在最近的一个有position属性的parent的位置上。display控制布局方式，block以block方式布局，inline以inline方式布局，inline-block以inline-block方式布局，而所有的布局方式的前提是元素在文档流当中，所以如果position设置为脱离文档流，display就只影响子元素的布局了。display:none直接让元素脱离文档流一样的布局方式。margin collapse也是在文档流时才会有效。overflow指的是当超出布局边界时的显示效果，跟怎么布局没关系。float也是直接脱离文档流了。<br>  <a href="http://www.cnblogs.com/jackyWHJ/p/3756087.html" target="_blank" rel="external">http://www.cnblogs.com/jackyWHJ/p/3756087.html</a></p>
+<p>18.对BFC规范(块级格式化上下文：block formatting context)的理解？<br> （W3C CSS 2.1 规范中的一个概念,它是一个独立容器，决定了元素如何对其内容进行定位,以及与其他元素的关系和相互作用。）<br>  一个页面是由很多个 Box 组成的,元素的类型和 display 属性,决定了这个 Box 的类型。<br>  不同类型的 Box,会参与不同的 Formatting Context（决定如何渲染文档的容器）,因此Box内的元素会以不同的方式渲染,也就是说BFC内部的元素和外部的元素不会互相影响。</p>
+<p>19.CSS权重优先级是如何计算的？<br>  以下是权重的规则：标签的权重为1，class的权重为10，id的权重为100，以下例子是演示各种定义的权重值：<br>  /权重为1/<br>  div{<br>  }<br>  /权重为10/<br>  .class1{<br>  }<br>  /权重为100/<br>  id1{<br>  }<br>  /权重为100+1=101/<br>  id1 div{<br>  }<br>  /权重为10+1=11/<br>  .class1 div{<br>  }<br>  /权重为10+10+1=21/<br>  .class1 .class2 div{<br>  }<br>  如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现</p>
+<p>20.请解释一下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式<br>  清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。<br>  1、父级div定义height；<br>  2、父级div 也一起浮动；<br>  3、常规的使用一个class；<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line"><span class="attribute">content</span>: <span class="string">" "</span>;</div><div class="line"><span class="attribute">display</span>: table;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line"><span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span> &#123;</div><div class="line">*zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  4、SASS编译的时候，浮动元素的父级div定义伪类:after<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&amp;<span class="selector-pseudo">:after</span>,&amp;<span class="selector-pseudo">:before</span>&#123;</div><div class="line"><span class="attribute">content</span>: <span class="string">" "</span>;</div><div class="line"><span class="attribute">visibility</span>: hidden;</div><div class="line"><span class="attribute">display</span>: block;</div><div class="line"><span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">clear</span>: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  解析原理：<br>  1) display:block 使生成的元素以块级元素显示,占满剩余空间;<br>  2) height:0 避免生成内容破坏原有布局的高度。<br>  3) visibility:hidden 使生成的内容不可见，并允许可能被生成内容盖住的内容可以进行点击和交互;<br>  4）通过 content:”.”生成内容作为最后一个元素，至于content里面是点还是其他都是可以的，例如oocss里面就有经典的 content:”.”,有些版本可能content 里面内容为空,一丝冰凉是不推荐这样做的,firefox直到7.0 content:”” 仍然会产生额外的空隙；<br>  5）zoom：1 触发IE hasLayout。<br>  通过分析发现，除了clear：both用来闭合浮动的，其他代码无非都是为了隐藏掉content生成的内容，这也就是其他版本的闭合浮动为什么会有font-size：0，line-height：0。<br>  zoom:1的清楚浮动原理?<br>  清楚浮动，触发hasLayout；<br>  Zoom属性是IE浏览器的专有属性，它可以设置或检索对象的缩放比例。解决ie下比较奇葩的bug。<br>  譬如外边距（margin）的重叠，浮动清除，触发ie的haslayout属性等。<br>  来龙去脉大概如下：<br>  当设置了zoom的值之后，所设置的元素就会就会扩大或者缩小，高度宽度就会重新计算了，这里一旦改变zoom值时其实也会发生重新渲染，运用这个原理，也就解决了ie下子元素浮动时候父元素不随着自动扩大的问题。<br>  Zoom属是IE浏览器的专有属性，火狐和老版本的webkit核心的浏览器都不支持这个属性。然而，zoom现在已经被逐步标准化，出现在 CSS 3.0 规范草案中。</p>
+<p>21.移动端的布局用过媒体查询吗？<br>  假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来， 而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS就是为文档提供在不同媒介上展示的适配方法<br>  当媒体查询为真时，相关的样式表或样式规则会按照正常的级联规被应用。 当媒体查询返回假， 标签上带有媒体查询的样式表 仍将被下载 （只不过不会被应用）。<br>  包含了一个媒体类型和至少一个使用 宽度、高度和颜色等媒体属性来限制样式表范围的表达式。 CSS3加入的媒体查询使得无需修改内容便可以使样式应用于某些特定的设备范围。<br>  @media (min-width: 700px) and (orientation: landscape){ .sidebar { display: none; } }</p>
+<p>22.使用 CSS 预处理器吗？喜欢那个？<br>  SASS (SASS、LESS没有本质区别，只因为团队前端都是用的SASS)</p>
+<p>23.CSS优化、提高性能的方法有哪些？<br>  关键选择器（key selector）。选择器的最后面的部分为关键选择器（即用来匹配目标元素的部分）；<br>  如果规则拥有 ID 选择器作为其关键选择器，则不要为规则增加标签。过滤掉无关的规则（这样样式系统就不会浪费时间去匹配它们了）；<br>  提取项目的通用公有样式，增强可复用性，按模块编写组件；增强项目的协同开发性、可维护性和可扩展性;<br>  使用预处理工具或构建工具（gulp对css进行语法检查、自动补前缀、打包压缩、自动优雅降级）；</p>
+<p>24.浏览器是怎样解析CSS选择器的？<br>  样式系统从关键选择器开始匹配，然后左移查找规则选择器的祖先元素。<br>  只要选择器的子树一直在工作，样式系统就会持续左移，直到和规则匹配，或者是因为不匹配而放弃该规则。</p>
+<p>25.在网页中的应该使用奇数还是偶数的字体？为什么呢？<br>  偶数字号相对更容易和 web 设计的其他部分构成比例关系。比如：当我用了 14 px 的正文字号，我可能会在一些地方用 14 × 0.5 = 7 px 的 margin，在另一些地方用 14 × 1.5 = 21 px 的标题字号。Windows 自带的点阵宋体（中易宋体）从 Vista 开始只提供 12、14、16 px 这三个大小的点阵，而 13、15、17 px 时用的是小一号的点阵（即每个字占的空间大了 1 px，但点阵没变），于是略显稀疏。这个我不确定，需要确认：听说有不少字体的 hinting 都只专门处理了常用的几个偶数字号。除了上面说的这些，奇偶字号的字体渲染效果似乎其实差别不大（尤其在 OS X 和 Linux 以及手持设备上）。即使在 Windows 里，微软雅黑在 11 至 17 px 之间的奇偶字号效果似乎也都差不多。（呃，都差不多糟糕……）目前 12、13、14、15、16 px 其实都是很不错的正文字号。知乎和豆瓣的正文字号都是 13 px，而中文维基百科的正文字号是 15 px，并没有什么不好。</p>
+<p>26.margin和padding分别适合什么场景使用？<br>  margin是用来隔开元素与元素的间距；padding是用来隔开元素与内容的间隔。<br>  margin用于布局分开元素使元素与元素互不相干；<br>  padding用于元素与内容之间的间隔，让内容（文字）与（包裹）元素之间有一段</p>
+<p>27.抽离样式模块怎么写，说出思路，有无实践经验？[阿里航旅的面试题]<br>   因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br>     最简单的初始化方法： * {padding: 0; margin: 0;} （强烈不建议）<br>     body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }<br>        body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }<br>        h1, h2, h3, h4, h5, h6{ font-size:100%; }<br>        address, cite, dfn, em, var { font-style:normal; }<br>        code, kbd, pre, samp { font-family:couriernew, courier, monospace; }<br>        small{ font-size:12px; }<br>        ul, ol { list-style:none; }<br>        a { text-decoration:none; }<br>        a:hover { text-decoration:underline; }<br>        sup { vertical-align:text-top; }<br>        sub{ vertical-align:text-bottom; }<br>        legend { color:#000; }<br>        fieldset, img { border:0; }<br>        button, input, select, textarea { font-size:100%; }<br>        table { border-collapse:collapse; border-spacing:0; }</p>
+<p>28.元素竖向的百分比设定是相对于容器的高度吗？<br>    相对于父元素宽度的：<br>    [max/min-]width、left、right、padding、margin 等；</p>
+<pre><code>相对于父元素高度的：
+[max/min-]height、top、bottom 等；
+
+相对于继承字号的：
+font-size 等；
+
+相对于自身字号的：
+line-height 等；
+
+相对于自身宽高的：
+border-radius、background-size、transform: translate()、transform-origin、zoom、clip-path 等；
+
+特殊算法的：
+background-position（方向长度 / 该方向除背景图之外部分总长度 * 100）、
+filter 系列函数等；
+</code></pre><p>29.全屏滚动的原理是什么？用到了CSS的那些属性？</p>
+<p>30.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？<br>  响应式网站设计(Responsive Web design)的理念是：集中创建页面的图片排版大小，可以智能地根据用户行为以及使用的设备环境（系统平台、屏幕尺寸、屏幕定向等）进行相对应的布局。 基本原理: 媒体查询 @media 兼容IE可以使用JS辅助一下来解决</p>
+<p>31.视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）<br>  当滚动鼠标滚轮的时候，各图层以不同速度移动，形成视差的效果。这就是时差滚动的大致原理。原理是这样，但落实到技术细节上时，实现的方法却各种各样。我个人大致归纳了一下：1、以 “页面滚动条” 作为 “视差动画进度条” 的；2、以 “滚轮刻度” 当作 “动画帧度” 去播放动画的（或者直接称为“隐藏进度条”）；3、鉴听mousewheel事件，事件被触发即播放动画，实现“翻页”效果；下面的回答，均以上述1类的实现方式为基准。</p>
+<p>32.::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用。<br>  单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。（伪元素由双冒号和伪元素名称组成）<br>  双冒号是在当前规范中引入的，用于区分伪类和伪元素。不过浏览器需要同时支持旧的已经存在的伪元素写法，<br>  比如:first-line、:first-letter、:before、:after等，<br>  而新的在CSS3中引入的伪元素则不允许再支持旧的单冒号的写法。<br>  想让插入的内容出现在其它内容前，使用::before，否者，使用::after；<br>  在代码顺序上，::after生成的内容也比::before生成的内容靠后。<br>  如果按堆栈视角，::after生成的内容会在::before生成的内容之上</p>
+<p>33.如何修改chrome记住密码后自动填充表单的黄色背景 ？<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-webkit-autofill</span>, <span class="selector-tag">textarea</span><span class="selector-pseudo">:-webkit-autofill</span>, <span class="selector-tag">select</span><span class="selector-pseudo">:-webkit-autofill</span> &#123;</div><div class="line">background-color: rgb(250, 255, 189); / #FAFFBD; /</div><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">none</span>;</div><div class="line"><span class="selector-tag">color</span>: <span class="selector-tag">rgb</span>(0, 0, 0);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>34.你对line-height是如何理解的？<br>  凡是有inline-block元素的地方就会有line-height的存在，就算你不设它的值，line-height依然通过继承来的fontsize等属性获得与之相匹配的line-height，这也是许多inline-block元素使用过程中出现各种怪现象的原因</p>
+<p>35.设置元素浮动后，该元素的display值是多少？（自动变成display:block）<br>    自动变成了 display:block</p>
+<p>36.怎么让Chrome支持小于12px 的文字？<br>  1、用图片：如果是内容固定不变情况下，使用将小于12px文字内容切出做图片，这样不影响兼容也不影响美观。<br>  2、使用12px及12px以上字体大小：为了兼容各大主流浏览器，建议设计美工图时候设置大于或等于12px的字体大小，如果是接单的这个时候就需要给客户讲解小于12px浏览器不兼容等事宜。<br>  3、继续使用小于12px字体大小样式设置：如果不考虑chrome可以不用考虑兼容，同时在设置小于12px对象设置-webkit-text-size-adjust:none，做到最大兼容考虑。<br>  4、使用12px以上字体：为了兼容、为了代码更简单 从新考虑权重下兼容性。</p>
+<p>35.让页面里的字体变清晰，变细用CSS怎么做？（-webkit-font-smoothing: antialiased;）<br>  -webkit-font-smoothing控制的字体渲染只对MacOS的Webkit有效。<br>  所以，你在MacOS测试环境下面设置-webkit-font-smoothing时，只要你不把它设置为none，怎么好看就设置为什么属性，反正这个属性仅仅是面向MacOS，不会在其他上下文中出岔子的（除了none的情形）。<br>  前端控制字体渲染的接口非常匮乏，如果可能，尽可能地控制输出的字体，而非控制字体渲染比较好。<br>  以下测试则会表明，-webkit-font-smoothing在MacOS上才有效果。<br>  Windows<br>  测试环境: Win7 Pro + Chrome（请戳大图）：<br>  结论：Windows系统上-webkit-font-smoothing属性不造成区别。</p>
+<p>  iOS<br>  测试环境:iPad Air + iOS7 + Safari（请戳大图）<br>  （iOS上没有Hiragino Sans GB，不要被标题误导了……）<br>  结论：iOS上，修改-webkit-font-smoothing属性，结果是：<br>  -webkit-font-smoothing: none: 无抗锯齿<br>  -webkit-font-smoothing: antialiased | subpixel-antialiased | default: 灰度平滑</p>
+<p>  MacOS<br>  测试环境：MBP + Safari（请戳大图）<br>  结论：iOS上，修改-webkit-font-smoothing属性，结果是：<br>  -webkit-font-smoothing: none: 无抗锯齿<br>  -webkit-font-smoothing: subpixel-antialiased | default: 次像素平滑<br>  -webkit-font-smoothing: antialiased: 灰度平滑</p>
+<p>  字体抗锯齿技术可以分为如下几类：<br>  黑白渲染：现在已经绝迹<br>  灰度渲染：常用于Android和iOS等移动设备的<br>  次像素平滑：常见于Mac OS和MacType For Windows<br>  ClearType：黑白渲染和次像素平滑的折中。WinXP内置，默认关闭；Win7以上默认打开<br>  理想形状；黑白渲染；灰度渲染。<br>  次像素平滑技术原理，从右往左看，注意到一个pixel里的渐变。</p>
+<p>36.font-style属性可以让它赋值为“oblique” oblique是什么意思？<br>  <code>font-style: oblique</code> 选择字体族的 oblique 变体。<code>italic</code> 选择字体族的 italic 变体，如果没有 italic 变体就妥协到 oblique 变体。如果字体族连 oblique 也未提供，则由浏览器合成倾斜的仿 oblique。比如 <code>font-family: Georgia, serif</code> 时，指定 <code>font-style: italic</code>，则浏览器使用 Georgia Italic。若 <code>font-family: Microsoft YaHei, sans-serif</code> 时指定 <code>font-style: italic</code>，因为微软雅黑没有 italic 或 oblique 变体，浏览器只得将 regular 变体倾斜以自动合成仿 oblique。没有什么应当使用 <code>oblique</code> 的场景。如果你读完以上那些文档还不知道字体的 oblique 和 italic 分别是什么意思，读：既然浏览器能用算法将正常字体加粗和变斜，那么斜体有必要吗？CSS 里没有「oblique 字体和 italic 字体」。CSS 里只有 <code>font-style</code> 这么一个属性以及该属性的 <code>oblique。没有什么应当使用e</code> 和 <code>italic</code> 等取值，这些取值要求浏览器选取相应的字体。理清逻辑。</p>
+<p>37.position:fixed;在android下无效怎么处理？<br>  <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no&quot;/&gt;</code></p>
+<p>38.如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）<br>  多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms</p>
+<p>39.display:inline-block 什么时候会显示间隙？(携程)<br>    移除空格、使用margin负值、使用font-size:0、letter-spacing、word-spacing</p>
+<p>40.overflow: scroll时不能平滑滚动的问题怎么处理？<br>    1、阻止所有能导致页面滚动的事件。//scroll不能阻止，只能阻止mousewheel，鼠标拽滚动条就悲剧了；<br>    2、bodyoverflow:hidden//win下右侧滚动条会消失导致页面横移，移动端阻止不了；<br>    3、把滚动部分单独放在一个div里，和弹出部分同级，body和window同高。//所有涉及offset/scrollTop的方法都要修改。fix并且width100%的元素(比如微博顶栏)会压在内容区滚动条上；<br>    4、弹出时算scrollTop，给内容区fix然后top移动到目前位置，同时body给一个overflow-y:scroll强撑出滚动条。</p>
+<p>41.有一个高度自适应的div，里面有两个div，一个高度100px，希望另一个填满剩下的高度。<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">  <span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"gb2312"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css">        <span class="selector-tag">body</span> &#123; <span class="attribute">height</span>: <span class="number">100%</span>; <span class="attribute">padding</span>: <span class="number">0</span>; <span class="attribute">margin</span>: <span class="number">0</span>; &#125;</span></div><div class="line"><span class="css">        <span class="selector-class">.box</span> &#123; <span class="attribute">height</span>: <span class="number">400px</span>; <span class="attribute">position</span>: relative; &#125;</span></div><div class="line"><span class="css">        <span class="selector-class">.a</span> &#123; <span class="attribute">height</span>: <span class="number">100px</span>; <span class="attribute">background</span>: <span class="number">#ff0000</span>; &#125;</span></div><div class="line"><span class="css">        <span class="selector-class">.b</span> &#123; <span class="attribute">background</span>: <span class="number">#00ff00</span>; <span class="attribute">width</span>: <span class="number">100%</span>; <span class="attribute">position</span>: absolute; <span class="attribute">top</span>: <span class="number">100px</span> ; <span class="attribute">left</span>: <span class="number">0</span> ; <span class="attribute">bottom</span>: <span class="number">0</span>;&#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>42.png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？<br>  PNG：这是三种中质量最好的一种，保存图像是静态图，可以保留32位色，也能保留透明与半透明区域，如果你是位图像设计者，要保存一幅自己设计的并且只有一个图层的图，建议你选择Png，但是很多网站不支持PNG上传<br>  JPG：这是目前使用最广泛的格式之一，因为其高质量的压缩率导致的图片大小减少，而且也支持32位色彩，因此被广泛使用，一般情况下，任何支持图片的地方都支持jpg，也为静态图，但确点是不支持透明区域<br>  GIF：这也是目前使用最广泛的格式之一，和jpg相比，有以下不同：颜色数只支持256色，支持透明区域，不支持半透明区域，可以保存为动态图<br>  WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
+<p>43.什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）<br>  传感器是一种检测装置，能感受到被测量的信息，并能将感受到的信息，按一定规律变换成为电信号或其他所需形式的信息输出，以满足信息的传输、处理、存储、显示、记录和控制等要求。<br>  传感器的特点包括:微型化、数字化、单伐厕和丿古搽汰敞咯智能化、多功能化、系统化、网络化。它是实现自动检测和自动控制的首要环节。传感器的存在和发展，让物体有了触觉、味觉和嗅觉等感官，让物体慢慢变得活了起来。通常根据其基本感知功能分为热敏元件、光敏元件、气敏元件、力敏元件、磁敏元件、湿敏元件、声敏元件、放射线敏感元件、色敏元件和味敏元件等十大类。</p>
+<p>44.style标签写在body后与body前有什么区别？<br>  写在body标签后由于浏览器以逐行方式对html文档进行解析，当解析到写在尾部的样式表（外联或写在style标签）会导致浏览器停止之前的渲染，等待加载且解析样式表完成之后重新渲染，在windows的IE下可能会出现FOUC现象（即样式失效导致的页面闪烁问题）</p>
+<p>45.css实现各种圆角<br><b>圆形：</b>CSS代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#circle</span> &#123; </div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>; </div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>; </div><div class="line">    <span class="attribute">background</span>: red; </div><div class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">50px</span>; </div><div class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">50px</span>; </div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  <b>椭圆：</b>CSS代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#oval</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background</span>: red;</div><div class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">100px</span> / <span class="number">50px</span>;</div><div class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">100px</span> / <span class="number">50px</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">100px</span> / <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  <b>倒三角：</b>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#retangle</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">border-left</span>:<span class="number">50px</span> solid transparent;</div><div class="line">    <span class="attribute">border-right</span>:<span class="number">50px</span> solid  transparent;</div><div class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>  <b>正三角：</b>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#back_retangle</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">border-right</span>: solid <span class="number">50px</span> transparent;</div><div class="line">    <span class="attribute">border-left</span>: solid <span class="number">50px</span> transparent;</div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid black;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>1.介绍JavaScript的基本数据类型。<br>  Undefined、Null、Boolean、Number、String<br>  ECMAScript 2015 新增:Symbol(创建后独一无二且不可变的数据类型 )</p>
+<p>2.说说写JavaScript的基本规范？</p>
+<ol>
+<li>文件编码统一为utf-8；  2. 书写过程过, 每行代码结束必须有分号； 3. 库引入: 原则上仅引入jQuery库；  4. 变量命名: 以下划线链接每个单词，类型_变量名； s：表示字符串； n：表示数字； b：表示逻辑； a：表示数组； r：表示正则表达式； f：表示函数；  o：表示以上未涉及到的其他对象； 变量在作用域的顶部申明。  5.常量：全部大写，以下划线分隔  如网站的URL，域,图片目录路径，js和css用到的目录路径；  6. 类命名: 首字母大写, 驼峰式命名. 如 Comment; 7. 函数命名: 首字母小写驼峰式命名. 如getUserName(); 8.类中私有方法，以下划线+方法名标注,私有方法不能在类外被调用。  9. 命名语义化, 尽可能利用英文单词或其缩写； 10. 代码结构明了化, 加适量注释. 提高函数重用率； 1)大功能区块的功能描述(类，函数)<br>/<em> 功能描述 参数描述 返回值 </em>/  2)单行的注释(放在行末尾) //注释  11. 注重与html分离, 减小reflow, 注重性能. 12.Dom中自定义的class，以j_classname的形式 13.把外部JavaScript文件放在HTML底部,的前面 14.优化循环(循环体中若有Dom操作，应该把Dom操作提到循环体外；在同一作用域内，Dom选择赋值给一局部变量。) 15.单引号和双引号  为了避免混乱，我们建议在HTML中使用双引号，在JavaScript中使用单引号。</li>
+</ol>
+<p>3.JavaScript原型，原型链 ? 有什么特点？<br>  原型：我们创建的每个函数都有一个prototype（原型）属性。这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。</p>
+<p>  原型链：​用来继承和共享属性的对象组成的(有限的)对象链。</p>
+<p>  ECMAScript只支持实现继承，而且其实现继承主要是依靠原型链来实现的。</p>
+<p>  只要是原型链中出现过的原型，都可以说是该原型链所派生的实例的原型。</p>
+<p>  不能用字面量创建原型的方法，这样做会重写原型链。</p>
+<p>  不要在原型对象中定义属性的，否则会被所有实例共享。</p>
+<p>4.JavaScript有几种类型的值？（堆：原始数据类型和 栈：引用数据类型），你能画一下他们的内存图吗？<br>  数据类型是所有程序都会涉及到的，是计算机语言比较基础知识，这种问题被问到的可能性其实并不大，这样的题目只要花点时间把它记下来就好了，难易程度一般。<br> 两大类：<br>  栈：原始数据类型（Undefined，Null，Boolean，Number、String）<br>  堆：引用数据类型（对象、数组和函数）<br>  区别：<br>  两种类型的区别是：存储位置不同；<br>  原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；<br>  引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其<br>  在栈中的地址，取得地址后从堆中获得实体</p>
+<p>5.Javascript如何实现继承？<br>  1、原型链继承<br>  核心： 将父类的实例作为子类的原型<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params"></span>)</span>&#123; </div><div class="line">&#125;</div><div class="line">Cat.prototype = <span class="keyword">new</span> Animal();</div><div class="line">Cat.prototype.name = <span class="string">'cat'</span>;</div><div class="line"></div><div class="line"><span class="comment">//　Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.eat(<span class="string">'fish'</span>));</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">//true </span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>  2、构造继承<br>  核心：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  Animal.call(<span class="keyword">this</span>);</div><div class="line">  <span class="keyword">this</span>.name = name || <span class="string">'Tom'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>  3、实例继承<br>  核心：为父类实例添加新特性，作为子类实例返回<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> instance = <span class="keyword">new</span> Animal();</div><div class="line">  instance.name = name || <span class="string">'Tom'</span>;</div><div class="line">  <span class="keyword">return</span> instance;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>  4.拷贝继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> animal = <span class="keyword">new</span> Animal();</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> p <span class="keyword">in</span> animal)&#123;</div><div class="line">    Cat.prototype[p] = animal[p];</div><div class="line">  &#125;</div><div class="line">  Cat.prototype.name = name || <span class="string">'Tom'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>  5、组合继承<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  Animal.call(<span class="keyword">this</span>);</div><div class="line">  <span class="keyword">this</span>.name = name || <span class="string">'Tom'</span>;</div><div class="line">&#125;</div><div class="line">Cat.prototype = <span class="keyword">new</span> Animal();</div><div class="line"></div><div class="line"><span class="comment">// Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>  6、寄生组合继承<br>  核心：通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性，避免的组合继承的缺点<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  Animal.call(<span class="keyword">this</span>);</div><div class="line">  <span class="keyword">this</span>.name = name || <span class="string">'Tom'</span>;</div><div class="line">&#125;</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// 创建一个没有实例方法的类</span></div><div class="line">  <span class="keyword">var</span> Super = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">  Super.prototype = Animal.prototype;</div><div class="line">  <span class="comment">//将实例作为子类的原型</span></div><div class="line">  Cat.prototype = <span class="keyword">new</span> Super();</div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="comment">// Test Code</span></div><div class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Cat();</div><div class="line"><span class="built_in">console</span>.log(cat.name);</div><div class="line"><span class="built_in">console</span>.log(cat.sleep());</div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Cat); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>6.Javascript创建对象的几种方式？<br>  // 1. 工厂方法:能创建并返回特定类型对象的工厂函数(factory function).<br>  function createCar(sColor){<br>  var car = new Object(); // 或者 var car = new Object ;<br>  // 对象属性<br>  car.color = sColor ;<br>  // 对象方法<br>  car.showColor = function (){<br>  alert(123);<br>  } ; // 记住，这里一定要用 ; 表示结束</p>
+<p>  return car; // 这里是 return car ; 而不是 return this.car ; 因为 this.car 为 undefined<br>  }<br>  /*<br>  调用此函数时，将创建对象，并赋予它所有必要的属性，使用此方法创建 car 对象的两个版本，<br>  ( oCar1 和 oCar2 ) ,他们的属性完全一样。<br>  使用此方法存在的问题:</p>
+<ol>
+<li>语义上看起来不像使用带有构造函数的 new 运算那么正规.</li>
+<li><p>使用这种方式必须创建对象的方法。每次调用 createCar()，都要创建 showColor(),意味着每一个对象<br>都有自己的 showColor 版本，事实上，每一个对象都共享了是同一个函数.<br>有些开发者在工厂函数外定义对象的方法，然后通过属性指向该方法。从而避免这个问题:<br>*/<br>function createCar2(sColor){<br>var car = new Object();<br>car.color = sColor ;<br>car.showColor = showColor ;</p>
+<p>return car ;<br>}</p>
+<p>function showColor(){<br>alert(this.color);<br>}</p>
+<p>var oCar1 = createCar(‘red’);<br>var oCar2 = createCar(‘yellow’);</p>
+<p>var oCar3 = createCar2(‘blue’);<br>var oCar4 = createCar2(‘black’);</p>
+<p>/<em><br>注意这两个对象(oCar3 和 oCar4 ) 调用showColor 属性的方式，虽然美其名曰是“属性”，其实还是方法!!!<br>所以是 oCar3.showColor(); 而不是 oCar3.showColor ;
+</em>/</p>
+<p>oCar3.showColor();<br>oCar4.showColor();</p>
+<p>/*<br>在这段重写的代码中，在函数 createCar2() 前定义了函数showColor(), 在 createCar2() 内部，赋予对象一个已经<br>指向已经存在的 showColor() 函数的指针，从功能上讲，这样解决了重复创建对象的问题，但该函数看起来不像对象<br>的方法。</p>
+<p>所有这些问题引起了开发者的定义构造函数的出现<br>*/</p>
+</li>
+</ol>
+<p>// 2. 构造函数方式</p>
+<p>  function Car(sColor){<br>  this.color = sColor;<br>  this.showColor = function(){<br>  alert(this.color);<br>  };<br>  }</p>
+<p>  var car1 = new Car(‘red’);<br>  car1.showColor();</p>
+<p>  /<em><br>你可能已经注意到第一个的差别了，在构造函数内部无创建对象，而是使用 this 关键字，使用 new<br>运算符调用构造函数，在执行第一行代码前先创建一个对象，只有用 this 才能访问该对象。然后可以<br>直接赋予 this 属性，默认情况下是构造函数的返回值，（不必明确使用 return 运算符）。<br>这种方式在管理函数方面与工厂方法一样都存在相同的问题.
+</em>/</p>
+<p>// 3. 原型方式<br>function PCar(){<br>}</p>
+<p>PCar.prototype.color = “blue”;<br>var pcar1 = new PCar();</p>
+<p>/<em><br>调用 new Car()时，原型的所有属性都被立即赋予要创建的对象，意味着所有的 PCar 实例存放的是指向<br>showColor() 函数的指针，从语义看起来都属于一个对象，因此解决了前面两种方式存在的问题。此外使用<br>该方法，还能使用 instanceof 运算符检查给定变量指向的对象类型。因此下面的代码将输出 true:
+</em>/<br>alert(pcar1 instanceof PCar); // output “true”</p>
+<p>/*<br>这个方法看起来不错，遗憾的是，它并不尽人意。</p>
+<ol>
+<li>首先这个构造函数没有参数。使用原型方式时，不能给构造函数传递参数初始化属性值，因为 pcar1 和<br>pcar2 的属性都等于 “blue”</li>
+<li>真正的问题出现在属性指向的对象,而不是函数时，函数共享不会造成任何问题，但是对象却是很少被多个<br>实例共享的。<br>*/</li>
+</ol>
+<p>// 4. 混合的构造函数/原型方式(推荐)<br>/<em><br>联合使用构造函数和原型方式，就可像使用其他程序设计语言一样创建对象，这种概念非常简单，即用构造函数<br>定义对象的所有非函数属性，用原型方式定义对象的函数属性(方法)。
+</em>/</p>
+<p>function hCar(sColor){<br>this.color = sColor;<br>this.drivers = new Array(‘Mike’,’Sue’);<br>}</p>
+<p>hCar.prototype.showColor = function(){<br>alert(this.color);<br>}</p>
+<p>var hcar1 = new hCar(‘y color’);<br>var hcar2 = new hCar(‘r color’);</p>
+<p>hcar1.drivers.push(‘Matt’);</p>
+<p>alert(hcar1.drivers); // output “Mike,Sue,Matt”<br>alert(hcar2.drivers); // output “Mike,Sue”</p>
+<p>// 5. 动态原型方式 (推荐)<br>/*<br>对于习惯使用其他开发语言的开发者来说，使用混合构造函数/原型方式感觉不那么和谐。批评构造函数/原型方式的人<br>认为，在构造函数内找属性，在外部找方法的做法不合理。所以他们设计了动态原型方式，以供更友好的编码风格。</p>
+<p>动态原型方式的基本想法与混合构造函数/原型方式 相同，即在构造函数内定义非函数的属性，而函数的属性则利用<br>原型属性定义。唯一的区别是赋予对象方法的位置。下面是使用动态原型方法重写的 Car 类:<br>*/</p>
+<p>function DCar(sColor){<br>this.color = sColor;<br>this.drivers = new Array(‘Mike’,’Sue’);</p>
+<p>if(typeof DCar._initialized == ‘undefined’){</p>
+<p>DCar.prototype.showColor = function(){<br>alert(this.color);<br>}<br>}</p>
+<p>DCar._initialized = true;<br>}</p>
+<p>var dcar1 = new DCar(‘y dcar’);<br>var dcar2 = new DCar(‘b dcar’);</p>
+<p>dcar1.showColor();<br>dcar2.showColor();</p>
+<p>alert(DCar._initialized); // output “true”<br>alert(dcar1._initialized); // output “undefined”<br>// 6、对象直接量、new创建<br>创建对象最简单的方法是你的javascript代码中包含对象直接量，也可以通过运算符new创建。<br>var empty = {}; // An object with no properties<br>var point = { x:0, y:0 };<br>var circle = { x:point.x, y:point.y+1, radius:2 };<br>var homer = {<br>“name”: “Homer Simpson”,<br>“age”: 34,<br>“married”: true,<br>“occupation”: “plant operator”,<br>‘email’: homer@example.com<br>};<br>var a = new Array(); // Create an empty array<br>var d = new Date(); // Create an object representing the current date and time<br>var r = new RegExp(“javascript”, “i”); // Create a pattern-matching object<br>　　创建对象后，我们可以通过”.”运算符，在对象中创建新属性、引用已有属性、设置属性值等。<br>　　　　var book = new Object(); 　　//创建对象<br>　　　　book.title=”JavaScript: The Definitive Guide”;<br>　　　　book.chapter1=new Object(); //作为对象属性的，嵌套对象<br>　　　　book.chapter1.title = “Introduction to JavaScript”;<br>　　　　book.chapter1.pages = 11;<br>　　　　book.chapter2 = { title: “Lexical Structure”, pages: 6 };<br>alert(“Outline: “ + book.title + “\n\t” +<br>　　　　　　“Chapter 1 “ + book.chapter1.title + “\n\t” +<br>　　　　　　“Chapter 2 “ + book.chapter2.title); // 从对象中读取一些属性.<br>在上例中，需注意，可以通过把一个值赋给对象的一个新属性来创建它．<br>　　在JavaScript语句中提到过用for/in语句可以遍历对象的属性和方法。</p>
+<p>7.Javascript作用链域?<br>  作用域就是变量和函数的可访问范围，控制着变量和函数的可见性与生命周期，在JavaScript中变量的作用域有全局作用域和局部作用域。</p>
+<p>  单纯的JavaScript作用域还是很好理解的，在一些类C编程语言中花括号内的每一段代码都有各自的作用域，而且变量在声明它们的代码段外是不可见的，称之为块级的作用域，JavaScript容易让初学者误会的地方也在于此，JavaScript并没有块及的作用域，只有函数级作用域：变量在声明它们的函数体及其子函数内是可见的。</p>
+<p>  变量没有在函数内声明或者声明的时候没有带var就是全局变量，拥有全局作用域，window对象的所有属性拥有全局作用域；在代码任何地方都可以访问，函数内部声明并且以var修饰的变量就是局部变量，只能在函数体内使用，函数的参数虽然没有使用var但仍然是局部变量。</p>
+<p>8.谈谈This对象的理解。<br>  this表示当前对象，this的指向是根据调用的上下文来决定的，默认指向window对象，指向window对象时可以省略不写，例如：<br>   this.alert() &lt;=&gt; window.alert()&lt;=&gt; alert();<br>  调用的上下文环境包括全局和局部<br>  全局环境<br>  全局环境就是在<script></script>里面，这里的this始终指向的是window对象<br>  局部环境</p>
+<p>1）在全局作用域下直接调用函数，this指向window<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;  </div><div class="line"> <span class="built_in">console</span>.log(<span class="keyword">this</span>) ;<span class="comment">//this指向的还是window对象  </span></div><div class="line">&#125;  </div><div class="line">func();</div></pre></td></tr></table></figure></p>
+<p>2）对象函数调用，哪个对象调用就指向哪个对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span>id=<span class="string">"btnOK"</span> value=<span class="string">"OK"</span>&gt;  </div><div class="line">  </div><div class="line">varbtnOK=<span class="built_in">document</span>.getElementById(<span class="string">"btnOK"</span>);  </div><div class="line">btnOK.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>);<span class="comment">//this指向的是btnOK对象  </span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3）使用 new 实例化对象，在构造函数中的this指向实例化对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  <span class="keyword">var</span> Show=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </div><div class="line">    <span class="keyword">this</span>.myName=<span class="string">"Mr.Cao"</span>;   <span class="comment">//这里的this指向的是obj对象  </span></div><div class="line">&#125;  </div><div class="line"><span class="keyword">var</span> obj=<span class="keyword">new</span> Show();</div></pre></td></tr></table></figure></p>
+<p>4）使用call或apply改变this的指向<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Go=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </div><div class="line">     <span class="keyword">this</span>.address=<span class="string">"深圳"</span>;  </div><div class="line">&#125;  </div><div class="line"><span class="keyword">var</span> Show=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </div><div class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>.address);<span class="comment">//输出 深圳  </span></div><div class="line">&#125;  </div><div class="line"><span class="keyword">var</span> go=<span class="keyword">new</span> Go();  </div><div class="line">Show.call(go);<span class="comment">//改变Show方法的this指向go对象</span></div></pre></td></tr></table></figure></p>
+<p>加分项</p>
+<ol>
+<li><p>用于区分全局变量和局部变量，需要使用this</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age=<span class="number">20</span>;  </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">age</span>)</span>&#123;  </div><div class="line">   <span class="keyword">this</span>.age=age;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2.返回函数当前的对象，看jquery1.8.3源码.<br>3.将当前的对象传递到下一个函数，看jquery1.8.3源码。</p>
+</li>
+</ol>
+<p>8.eval是做什么的？<br>  eval()的作用<br>  把字符串参数解析成JS代码并运行，并返回执行的结果；<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line"><span class="built_in">eval</span>(<span class="string">"2+3"</span>);<span class="comment">//执行加运算，并返回运算值。  </span></div><div class="line"><span class="built_in">eval</span>(<span class="string">"varage=10"</span>);<span class="comment">//声明一个age变量</span></div></pre></td></tr></table></figure></p>
+<p>  eval的作用域<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">functiona()&#123;  </div><div class="line"> <span class="built_in">eval</span>(<span class="string">"var x=1"</span>); <span class="comment">//等效于 var x=1;  </span></div><div class="line"> <span class="built_in">console</span>.log(x); <span class="comment">//输出1  </span></div><div class="line">&#125;  </div><div class="line">a();  </div><div class="line"><span class="built_in">console</span>.log(x);<span class="comment">//错误 x没有定义</span></div></pre></td></tr></table></figure></p>
+<p>注意事项</p>
+<p>应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。</p>
+<p>  其它作用<br>  由JSON字符串转换为JSON对象的时候可以用eval，例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">varjson=<span class="string">"&#123;name:'Mr.CAO',age:30&#125;"</span>;  </div><div class="line">varjsonObj=<span class="built_in">eval</span>(<span class="string">"("</span>+json+<span class="string">")"</span>);  </div><div class="line"><span class="built_in">console</span>.log(jsonObj);</div></pre></td></tr></table></figure></p>
+<p>9.什么是window对象? 什么是document对象?<br>  简单来说，document是window的一个对象属性。<br>Window 对象表示浏览器中打开的窗口。<br>如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。<br>所有的全局函数和对象都属于Window 对象的属性和方法。<br>document   对 Document 对象的只读引用。<br>[window对象]</p>
+<p>　　它是一个顶层对象,而不是另一个对象的属性，即浏览器的窗口。</p>
+<p>　　属性</p>
+<p>　　defaultStatus 缺省的状态条消息</p>
+<p>　　document 当前显示的文档(该属性本身也是一个对象)</p>
+<p>　　frame 窗口里的一个框架((FRAME&gt;)(该属性本身也是一个对象)</p>
+<p>　　frames array 列举窗口的框架对象的数组,按照这些对象在文档中出现的顺序列出(该属性本身也是一个</p>
+<p>对象)</p>
+<p>　　history 窗口的历史列表(该属性本身也是一个对象)</p>
+<p>　　length 窗口内的框架数</p>
+<p>　　 location 窗口所显示文档的完整(绝对)URL(该属性本身也是一个对象)不要把它与如document.location</p>
+<p>混淆,后者是当前显示文档的URL。用户可以改变window.location(用另一个文档取代当前文档),但却不能改变</p>
+<p>document.location (因为这是当前显示文档的位置)</p>
+<p>　　name 窗口打开时,赋予该窗口的名字</p>
+<p>　　opener 代表使用window.open打开当前窗口的脚本所在的窗口(这是Netscape Navigator 3.0beta 3所引</p>
+<p>入的一个新属性)</p>
+<p>　　parent 包含当前框架的窗口的同义词。frame和window对象的一个属性</p>
+<p>　　self 当前窗口或框架的同义词</p>
+<p>　　status 状态条中的消息</p>
+<p>　　top 包含当前框架的最顶层浏览器窗口的同义词</p>
+<p>　　window 当前窗口或框架的同义词,与self相同</p>
+<p>　　方法</p>
+<p>　　alert() 打开一个Alert消息框</p>
+<p>　　clearTimeout() 用来终止setTimeout方法的工作</p>
+<p>　　close() 关闭窗口</p>
+<p>　　 confirm() 打开一个Confirm消息框,用户可以选择OK或Cancel,如果用户单击OK,该方法返回true,单击</p>
+<p>Cancel返回false</p>
+<p>　　 blur() 把焦点从指定窗口移开(这是Netscape Navigator 3.0 beta 3引入的新方法)</p>
+<p>　　focus() 把指定的窗口带到前台(另一个新方法)</p>
+<p>　　open() 打开一个新窗口</p>
+<p>　　 prompt() 打开一个Prompt对话框,用户可向该框键入文本,并把键入的文本返回到脚本</p>
+<p>　　setTimeout() 等待一段指定的毫秒数时间,然后运行指令事件处理程序事件处理程序</p>
+<p>　　Onload() 页面载入时触发</p>
+<p>　　Onunload() 页面关闭时触发</p>
+<p>[document 对象]</p>
+<p>　　该对象是window和frames对象的一个属性,是显示于窗口或框架内的一个文档。</p>
+<p>　　属性</p>
+<p>　　alinkColor 活动链接的颜色(ALINK)</p>
+<p>　　anchor 一个HTMI锚点,使用<a name="">标记创建(该属性本身也是一个对象)</a></p>
+<p>　　anchors array 列出文档锚点对象的数组(<a name="">)(该属性本身也是一个对象)</a></p>
+<p>　　bgColor 文档的背景颜色(BGCOLOR)</p>
+<p>　　cookie 存储于cookie.txt文件内的一段信息,它是该文档对象的一个属性</p>
+<p>　　fgColor 文档的文本颜色(<body>标记里的TEXT特性)</body></p>
+<p>　　form 文档中的一个窗体(<form>)(该属性本身也是一个对象)</form></p>
+<p>　　forms anay 按照其出现在文档中的顺序列出窗体对象的一个数组(该属性本身也是一个对象)</p>
+<p>　　lastModified 文档最后的修改日期</p>
+<p>　　linkColor 文档的链接的颜色,即<body>标记中的LINK特性(链接到用户没有观察到的文档)</body></p>
+<p>　　link 文档中的一个<a href="">标记(该属性本身也是一个对象)</a></p>
+<p>　　links array 文档中link对象的一个数组,按照它们出现在文档中的顺序排列(该属性本身也是一个对象)</p>
+<p>　　location 当前显示文档的URL。用户不能改变document.location(因为这是当前显示文档的位置)。但是,</p>
+<p>可以改变 window.location (用其它文档取代当前文档)window.location本身也是一个对象,而</p>
+<p>document.location不是对象</p>
+<p>　　referrer 包含链接的文档的URL,用户单击该链接可到达当前文档</p>
+<p>　　title 文档的标题((TITLE&gt;)</p>
+<p>　　vlinkColor 指向用户已观察过的文档的链接文本颜色,即<body>标记的VLINK特性</body></p>
+<p>　　方法</p>
+<p>　　clear 清除指定文档的内容</p>
+<p>　　close 关闭文档流</p>
+<p>　　open 打开文档流</p>
+<p>　　 write 把文本写入文档</p>
+<p>　　writeln 把文本写入文档,并以换行符结尾</p>
+<p>区别:1、window 指窗体。document指页面。document是window的一个子对象。</p>
+<pre><code>2、用户不能改变 document.location(因为这是当前显示文档的位置)。但是,可以改变window.location (用其它文档取代当前文档)window.location本身也是一个对象,而document.location不是对象
+</code></pre><p>10.null，undefined的区别？<br>  在JavaScript中存在这样两种原始类型:Null与Undefined。这两种类型常常会使JavaScript的开发人员产生疑惑，在什么时候是Null，什么时候又是Undefined?</p>
+<p>Undefined类型只有一个值，即undefined。当声明的变量还未被初始化时，变量的默认值为undefined。<br>Null类型也只有一个值，即null。null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。</p>
+<p>11.写一个通用的事件侦听器函数(机试题)。</p>
+<p>12.[“1”, “2”, “3”].map(parseInt) 答案是多少？<br>  答案[1, NaN, NaN].<br>  原因：parseInt接收的是两个参数，map传递的是3个参数。</p>
+<p>13.关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">stopEvent</span>(<span class="params"></span>)</span>&#123; <span class="comment">//阻止冒泡事件</span></div><div class="line"> <span class="comment">//取消事件冒泡 </span></div><div class="line"> <span class="keyword">var</span> e=<span class="built_in">arguments</span>.callee.caller.arguments[<span class="number">0</span>]||event; <span class="comment">//若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容</span></div><div class="line"> <span class="keyword">if</span> (e &amp;&amp; e.stopPropagation) &#123; </div><div class="line">  <span class="comment">// this code is for Mozilla and Opera</span></div><div class="line">  e.stopPropagation(); </div><div class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">window</span>.event) &#123; </div><div class="line">  <span class="comment">// this code is for IE </span></div><div class="line">  <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>; </div><div class="line"> &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>一般在IE环境下可以省略掉（var e=arguments.callee.caller.arguments[0]||event;）直接运行即可，但是在FF下不行了，它会报e.stopPropagation没有定义，所以要事先定义，才能兼容。</p>
+<p>14.什么是闭包（closure），为什么要用它？<br>  闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。</p>
+<p>  闭包的特性：</p>
+<p>  1.函数内再嵌套函数<br>  2.内部函数可以引用外层的参数和变量<br>  3.参数和变量不会被垃圾回收机制回收</p>
+<p>15.javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么？<br>  标记 严格模式后<br>  其一：如果在语法检测时发现语法问题，则整个代码块失效，并导致一个语法异常。<br>  其二：如果在运行期出现了违反严格模式的代码，则抛出执行异常。<br>  注：经过测试IE6,7,8,9均不支持严格模式。<br>  缺点：<br>  现在网站的JS 都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节。</p>
+<p>16.如何判断一个对象是否属于某个类？<br>  如何判断js中的数据类型：typeof、instanceof、 constructor、 prototype方法比较<br>  遇到预知Object类型的情况可以选用instanceof或constructor方法</p>
+<p>17.new操作符具体干了什么呢?<br>（1）创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。<br>（2）属性和方法被加入到 this 引用的对象中。<br>（3）新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
+<p>18.对JSON的了解？<br>  JSON的全称是”JavaScript Object Notation”，意思是JavaScript对象表示法，它是一种基于文本，独立于语言的轻量级数据交换格式。XML也是一种数据交换格式，为什么没有选择XML呢？因为XML虽然可以作为跨平台的数据交换格式，但是在JS(JavaScript的简写)中处理XML非常不方便，同时XML标记比数据多，增加了交换产生的流量，而JSON没有附加的任何标记，在JS中可作为对象处理，所以我们更倾向于选择JSON来交换数据。这篇文章主要从以下几个方面来说明JSON。</p>
+<p>  1，JSON的两种结构<br>  2，认识JSON字符串<br>  3，在JS中如何使用JSON<br>  4，在.NET中如何使用JSON<br>  5，总结<br>  JSON有两种表示结构，对象和数组。<br>  对象结构以”{”大括号开始，以”}”大括号结束。中间部分由0或多个以”，”分隔的”key(关键字)/value(值)”对构成，关键字和值之间以”：”分隔，语法结构如代码。</p>
+<p>  其中关键字是字符串，而值可以是字符串，数值，true,false,null,对象或数组<br>  数组结构以”[”开始，”]”结束。中间由0或多个以”，”分隔的值列表组成，语法结构如代码。<br>  字符串：这个很好解释，指使用“”双引号或’’单引号包括的字符。例如：var comStr = ‘this is string’;<br>  json字符串：指的是符合json格式要求的js字符串。例如：var jsonStr = “{StudentID:’100’,Name:’tmac’,Hometown:’usa’}”;<br>  json对象：指符合json格式要求的js对象。例如：var jsonObj = { StudentID: “100”, Name: “tmac”, Hometown: “usa” };</p>
+<p>  JSON是JS的一个子集，所以可以在JS中轻松地读，写JSON。读和写JSON都有两种方法，分别是利用”.”操作符和“[key]”的方式。</p>
+<p>19.js延迟加载的方式有哪些？<br>  1.使用setTimeout延迟方法的加载时间<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>)</span>&#123;</div><div class="line">     $.post(<span class="string">"/lord/login"</span>,&#123;<span class="attr">name</span>:username,<span class="attr">pwd</span>:password&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">         alert(<span class="string">"Hello"</span>);</div><div class="line">     &#125;);</div><div class="line"> &#125;</div><div class="line"> $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">     setTimeout(<span class="string">'A()'</span>, <span class="number">1000</span>); <span class="comment">//延迟1秒</span></div><div class="line"> &#125;)</div></pre></td></tr></table></figure></p>
+<p>  2.让js最后加载<br>  例如引入外部js脚本文件时，如果放入html的head中,则页面加载前该js脚本就会被加载入页面，而放入body中，则会按照页面从上倒下的加载顺序来运行javascript的代码~~~ 所以我们可以把js外部引入的文件放到页面底部，来让js最后引入，从而加快页面加载速度</p>
+<p>  3.上述方法2也会偶尔让你收到Google页面速度测试工具的“延迟加载javascript”警告。所以这里的解决方案将是来自Google帮助页面的推荐方案。</p>
+<p>20.Ajax 是什么? 如何创建一个Ajax？<br>  Ajax 是一种异步请求数据的一种技术，对于改善用户的体验和程序的性能很有帮助<br>  异步传输+js+xml<br>  所谓异步,在这里简单的解释就是:向服务器发送请求的时候,我们不必等待结果,而是可以同时做其他的事情,等到有了结果它自己会根据设定进行后续操作,与此同时,页面是不会发送整夜刷新的,提高了用户体验.<br>  (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象<br>  (2)创建一个新的HTTP请求,并指定该HTTP请求的方法,URL及验证信息<br>  (3)设置响应HTTP请求状态变化的函数<br>  (4)发送HTTP请求<br>  (5)获取异步调用返回的数据<br>  (6)使用JavaScript和DOM实现局部刷新</p>
+<p>21.同步和异步的区别?<br>  在计算机领域，同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去；异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进行处理，这样可以提高执行的效率。</p>
+<p>22.如何解决跨域问题?<br>  共有几种解决方案：<br>　　（1）document.domain + iframe<br>　　（2）动态创建script<br>　　（3）window.name + iframe<br>　　（4）window.postMessage<br>　　（5）CORS<br>　　（6）JSONP<br>　　（7）nginx代理</p>
+<p>23.谈一谈你对ECMAScript6的了解？<br>    ES6是继ES5之后的一次主要改进，语言规范由ES5.1时代的245页扩充至600页。ES6增添了许多必要的特性，例如：模块和类，以及一些实用特性，例如Maps、Sets、Promises、生成器（Generators）等。尽管ES6做了大量的更新，但是它依旧完全向后兼容以前的版本，标准化委员会决定避免由不兼容版本语言导致的“web体验破碎”。结果是，所有老代码都可以正常运行，整个过渡也显得更为平滑，但随之而来的问题是，开发者们抱怨了多年的老问题依然存在。</p>
+<p>   ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准，已经在2015年6月正式发布了。Mozilla公司将在这个标准的基础上，推出JavaScript 2.0。<br>   ECMAScript和JavaScript到底是什么关系？很多初学者会感到困惑，简单来说，ECMAScript是JavaScript语言的国际标准，JavaScript是ECMAScript的实现。</p>
+<p>24.ECMAScript6 怎么写class么，为什么会出现class这种东西?<br>  ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用ES6的“类”改写，就是下面这样。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//定义类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(x, y) &#123;</div><div class="line">    <span class="keyword">this</span>.x = x;</div><div class="line">    <span class="keyword">this</span>.y = y;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  toString() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>25.异步加载的方式有哪些？<br>  方法一：也叫Script DOM Element<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   <span class="keyword">var</span> scriptEle = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">   scriptEle.type = <span class="string">"text/javasctipt"</span>;</div><div class="line">   scriptEle.async = <span class="literal">true</span>;</div><div class="line">   scriptEle.src = <span class="string">"http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"</span>;</div><div class="line">   <span class="keyword">var</span> x = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>];</div><div class="line">   x.insertBefore(scriptEle, x.firstChild);    </div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<p>  方法二：onload时的异步加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">  if(window.attachEvent)&#123;</div><div class="line">      window.attachEvent(&quot;load&quot;, asyncLoad);</div><div class="line">    &#125;else&#123;</div><div class="line">      window.addEventListener(&quot;load&quot;, asyncLoad);</div><div class="line">    &#125;</div><div class="line">    var asyncLoad = function()&#123;</div><div class="line">      var ga = document.createElement(&apos;script&apos;); </div><div class="line">        ga.type = &apos;text/javascript&apos;; </div><div class="line">        ga.async = true; </div><div class="line">        ga.src = (&apos;https:&apos; == document.location.protocol ? &apos;https://ssl&apos; : &apos;http://www&apos;) + &apos;.google-analytics.com/ga.js&apos;; </div><div class="line">        var s = document.getElementsByTagName(&apos;script&apos;)[0]; </div><div class="line">        s.parentNode.insertBefore(ga, s);</div><div class="line">    &#125;</div><div class="line">)();</div></pre></td></tr></table></figure></p>
+<p> 方法三：其他方法<br>由于JavaScript的动态性，还有很多异步加载方法： XHR Injection、 XHR Eval、 Script In Iframe、 Script defer属性、 document.write(script tag)。<br>XHR Injection(XHR 注入)：通过XMLHttpRequest来获取javascript，然后创建一个script元素插入到DOM结构中。ajax请求成功后设置script.text为请求成功后返回的responseText。</p>
+<p>有些JS代码在某些情况在需要使用，并不是页面初始化的时候就要用到。延迟加载就是为了解决这个问题。将JS切分成许多模块，页面初始化时只加载需要立即执行的JS，然后其它JS的加载延迟到第一次需要用到的时候再加载。类似图片的延迟加载。<br>JS的加载分为两个部分：下载和执行。异步加载只是解决了下载的问题，但是代码在下载完成后就会立即执行，在执行过程中浏览器处于阻塞状态，响应不了任何需求。<br>解决思路：为了解决JS延迟加载的问题，可以利用异步加载缓存起来，但不立即执行，需要的时候在执行。如何进行缓存呢？将JS内容作为Image或者Object对象加载缓存起来，所以不会立即执行，然后在第一次需要的时候在执行。</p>
+<p>25.documen.write和 innerHTML的区别?<br>  document.write是直接写入到页面的内容流，如果在写之前没有调用document.open, 浏览器会自动调用open。每次写完关闭之后重新调用该函数，会导致页面被重写。<br>  innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。如果想修改document的内容，则需要修改document.documentElement.innerElement。<br>  innerHTML将内容写入某个DOM节点，不会导致页面全部重绘</p>
+<p>  innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。</p>
+<p>26.DOM操作——怎样添加、移除、移动、复制、创建和查找节点?<br>  （1）创建新节点</p>
+<pre><code>createDocumentFragment()    //创建一个DOM片段
+
+createElement()   //创建一个具体的元素
+
+createTextNode()   //创建一个文本节点
+</code></pre><p>（2）添加、移除、替换、插入</p>
+<pre><code>appendChild()
+
+removeChild()
+
+replaceChild()
+
+insertBefore() //在已有的子节点前插入一个新的子节点
+</code></pre><p>（3）查找</p>
+<pre><code>getElementsByTagName()    //通过标签名称
+
+getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)
+
+getElementById()    //通过元素Id，唯一性
+</code></pre><p>27..call() 和 .apply() 的含义和区别？<br>    我在一开始看到javascript的函数apply和call时,非常的模糊,看也看不懂,最近在网上看到一些文章对apply方法和call的一些示例,总算是看的有点眉目了,在这里我做如下笔记,希望和大家分享.. 如有什么不对的或者说法不明确的地方希望读者多多提一些意见,以便共同提高..<br>    1.apply和call的区别在哪里</p>
+<p>2.什么情况下用apply,什么情况下用call</p>
+<p>3.apply的其他巧妙用法（一般在什么情况下可以使用apply）</p>
+<p>我首先从网上查到关于apply和call的定义,然后用示例来解释这两个方法的意思和如何去用.</p>
+<p>apply:方法能劫持另外一个对象的方法，继承另外一个对象的属性.</p>
+<p>Function.apply(obj,args)方法能接收两个参数<br>obj：这个对象将代替Function类里this对象<br>args：这个是数组，它将作为参数传给Function（args–&gt;arguments）</p>
+<p>call:和apply的意思一样,只不过是参数列表不一样.</p>
+<p>Function.call(obj,[param1[,param2[,…[,paramN]]]])<br>obj：这个对象将代替Function类里this对象<br>params：这个是一个参数列表</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">前端面试常见问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/面试题/" class="article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yaochuxia.github.io/2017/10/13/2017前端面试常见问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/10/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/12/2017前端面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017前端面试题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 姚楚霞
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: false
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">前端面试常见问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">解决命令行搭建环境的一些问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Mac 常用快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hexo命令添加一个分类页面。</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">在本地JavaScript做到这一点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端资源</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
