@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yaochuxia.github.io">
-  <title>React数据流和组件间的通信总结 | 姚楚霞的博客</title>
+  <title>React生命周期详解 | 姚楚霞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天来给大家总结下React的单向数据流与组件间的沟通。 首先，我认为使用React的最大好处在于：功能组件化，遵守前端可维护的原则。 先介绍单向数据流吧。">
+  <meta name="description" content="React严格意义了组件的生命周期会经历如下三个流程：  装载过程（Mount），组件第一次在DOM树渲染的过程。 更新过程（Update），当组件被重新渲染的过程。 卸载过程（Unmount），组件重DOM树中删除的过程。执行3个过程的调用函数就是声明周期函数。React 生命周期分为三种状态 1. 初始化 2.更新 3.销毁">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React数据流和组件间的通信总结">
-<meta property="og:url" content="http://yaochuxia.github.io/2017/10/30/React数据流和组件间的通信总结/index.html">
+<meta property="og:title" content="React生命周期详解">
+<meta property="og:url" content="http://yaochuxia.github.io/2017/12/13/React生命周期详解/index.html">
 <meta property="og:site_name" content="姚楚霞的博客">
-<meta property="og:description" content="今天来给大家总结下React的单向数据流与组件间的沟通。 首先，我认为使用React的最大好处在于：功能组件化，遵守前端可维护的原则。 先介绍单向数据流吧。">
-<meta property="og:updated_time" content="2017-10-30T13:15:27.000Z">
+<meta property="og:description" content="React严格意义了组件的生命周期会经历如下三个流程：  装载过程（Mount），组件第一次在DOM树渲染的过程。 更新过程（Update），当组件被重新渲染的过程。 卸载过程（Unmount），组件重DOM树中删除的过程。执行3个过程的调用函数就是声明周期函数。React 生命周期分为三种状态 1. 初始化 2.更新 3.销毁">
+<meta property="og:updated_time" content="2017-12-14T02:05:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React数据流和组件间的通信总结">
-<meta name="twitter:description" content="今天来给大家总结下React的单向数据流与组件间的沟通。 首先，我认为使用React的最大好处在于：功能组件化，遵守前端可维护的原则。 先介绍单向数据流吧。">
+<meta name="twitter:title" content="React生命周期详解">
+<meta name="twitter:description" content="React严格意义了组件的生命周期会经历如下三个流程：  装载过程（Mount），组件第一次在DOM树渲染的过程。 更新过程（Update），当组件被重新渲染的过程。 卸载过程（Unmount），组件重DOM树中删除的过程。执行3个过程的调用函数就是声明周期函数。React 生命周期分为三种状态 1. 初始化 2.更新 3.销毁">
   
     <link rel="alternative" href="/atom.xml" title="姚楚霞的博客" type="application/atom+xml">
   
@@ -167,108 +167,68 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-React数据流和组件间的通信总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-React生命周期详解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      React数据流和组件间的通信总结
+      React生命周期详解
     </h1>
   
 
         
-        <a href="/2017/10/30/React数据流和组件间的通信总结/" class="archive-article-date">
-  	<time datetime="2017-10-30T08:37:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-30</time>
+        <a href="/2017/12/13/React生命周期详解/" class="archive-article-date">
+  	<time datetime="2017-12-13T13:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天来给大家总结下React的单向数据流与组件间的沟通。</p>
-<p>首先，我认为使用React的最大好处在于：功能组件化，遵守前端可维护的原则。</p>
-<p>先介绍单向数据流吧。<br><a id="more"></a> </p>
-<h3 id="React单向数据流"><a href="#React单向数据流" class="headerlink" title="React单向数据流:"></a>React单向数据流:</h3><p>React时单向数据流，数据主要从父节点传递到子节点（通过props）。<br>如果顶层（父级）的某个props改变了，React会重现渲染所有的字节点。</p>
-<h4 id="刚才我们提到了Props，怎么理解Props呢？"><a href="#刚才我们提到了Props，怎么理解Props呢？" class="headerlink" title="刚才我们提到了Props，怎么理解Props呢？"></a>刚才我们提到了Props，怎么理解Props呢？</h4><p><b>Props</b><br><code>props</code>是<code>property</code>的缩写，可以理解为HTML标签的<code>attribute</code>。<br>不可以使用<code>this.props</code>直接修改<code>props</code>，因为props是只读的，<code>props</code>是用于整个组件树中传递数据和配置。<br>在当组件访问<code>props</code>，使用<code>this.props</code>。</p>
-<p>贴出props的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var React = require(&apos;react&apos;);</div><div class="line">var ReactDom = require(&apos;react-dom&apos;);</div><div class="line"></div><div class="line">var Box = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        var data = this.props.data;//此时this.props指的是Box组件中的属性</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;div data=&#123;data&#125;&gt;&lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;); </div><div class="line">ReactDom.render(</div><div class="line">    &lt;Box data=&#123;data&#125;&gt;&lt;/Box&gt;,</div><div class="line">    document.getElementById(&apos;root&apos;)</div><div class="line">)</div></pre></td></tr></table></figure></p>
+        <p><code>React</code>严格意义了组件的生命周期会经历如下三个流程：</p>
 <ul>
-<li>data 为一个模拟数据，无具体意义，仅供举例使用。</li>
+<li>装载过程（Mount），组件第一次在DOM树渲染的过程。</li>
+<li>更新过程（Update），当组件被重新渲染的过程。</li>
+<li><p>卸载过程（Unmount），组件重DOM树中删除的过程。<br>执行3个过程的调用函数就是声明周期函数。<code>React</code> 生命周期分为三种状态 1. 初始化 2.更新 3.销毁</p>
+<a id="more"></a>
+</li>
+<li><p>初始化<br>1、getDefaultProps()<br>  设置默认的props，也可以用dufaultProps设置组件的默认属性.</p>
+</li>
 </ul>
-<h3 id="接下来说说state"><a href="#接下来说说state" class="headerlink" title="接下来说说state"></a>接下来说说state</h3><h3 id="State"><a href="#State" class="headerlink" title="State:"></a>State:</h3><p>每个组件都有属于自己的<code>state</code>，<code>state</code>和<code>props</code>的区别在于前者（state）只存在于组件内，只能从当前组件调用，<code>this.setState</code>修改state值（不可以直接修改this.state）。<br>一般我们更新自组件都是通过改变state值，更新新子组件的props值从而达到更新。</p>
-<p>我们举个列子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Box = React.createClass(&#123;</div><div class="line">    getInitialState:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span>&#123;</div><div class="line">            text: <span class="string">''</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> text = <span class="keyword">this</span>.state.text;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>这里使用<code>getInitialState</code>来初始化<code>state</code>，例子里面state是text，然后通过<code>this.state.text</code>读取state值</p>
-<p>Props与state:<br>尽可能使用props当作数据源，state用来存放状态值（简单的数据）。<br>也就是说咱们通常用的props传递大量数据，state用于存放组件内部的一些简单的定义数据。（需要通过大量运用react可以感受到这点）。</p>
-<p>那么单向数据流的原理及一些概念咱么说完了，接下来咱们看看组件间是怎么进行沟通的：</p>
-<p>一般来说，有两种沟通方式：</p>
-<font color="#008000" size="3">一、父子组件沟通</font>     
-
-<p>在React中，最为常见的组件沟通也就是父子了，一般情况是：  </p>
+<p>2、getInitialState()<br>    在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props</p>
+<p>3、componentWillMount()<br>    组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。</p>
+<p>4、 render()<br>    react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。</p>
+<p>5、componentDidMount()<br>    组件渲染之后调用，只调用一次。</p>
 <ul>
-<li>父组件更新组件状态  —–props—–&gt;　子组件更新</li>
+<li>更新<br>6、componentWillReceiveProps(nextProps)<br>  组件初始化时不调用，组件接受新的props时调用。</li>
 </ul>
-<p>　　另一种情况是：</p>
-<p>　　* 子组件更新父组件状态   —–需要父组件传递回调函数—–&gt;  子组件调用触发</p>
-<p>　　可能大家对于第二种子组件更新父组件状态的情况有些不理解：<br>是这样的，一般情况下，只能由父组件通过props传递数据给子组件，使得子组件得到更新，那么现在，我们想实现</p>
-<p>子组件更新父组件就需要 父组件通过props传递一个回调函数到子组件中，这个回调函数可以更新父组件，子组件就是</p>
-<p>通过触发这个回调函数，从而使父组件得到更新。（类似于一种取巧的做法）</p>
-<p>这里贴出 子组件更新父组件 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">var Son = React.createClass(&#123;</div><div class="line">    render: function()&#123;</div><div class="line">        return()&#123;</div><div class="line">            &lt;div&gt;</div><div class="line">                &#123;this.props.text&#125;</div><div class="line">                &lt;botton onClick=&#123;this.props.refreshBox&#125;&gt;更新父组件&lt;/botton&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">var Box = React.createClass(&#123;</div><div class="line">    getInitialState: function()&#123;</div><div class="line">        return(</div><div class="line">            text: &apos;&apos;</div><div class="line">        )</div><div class="line">    &#125;,</div><div class="line">    refreshBox:function()&#123;</div><div class="line">        this.setState(&#123;</div><div class="line">            text:&apos;自组件更新父组件成功&apos;</div><div class="line">        &#125;)</div><div class="line">    &#125;,</div><div class="line">    render:function()&#123;</div><div class="line">        var data = this.props.data;//此时this.props指向的是Box组件中的属性</div><div class="line">        var text = this.state.text;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;div data=&#123;dtat&#125;&gt;&lt;/div&gt;</div><div class="line">                &lt;Son text=&#123;this.state.text&#125;refreshBox=&#123;this.refreshBox.bind(this)&#125;&gt;&lt;/Son&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>在这个例子中，refreshBox是父组件创建的一个回调函数，将其传入Son组件中，然后通过Son组件进行调用触发，</p>
-<p>进而改变state，实现子组件对父组件的更新。</p>
-<p><font color="#008000" size="3">二、兄弟组件沟通</font><br>当两个组件处于同一级时（同处父级，或者同处子级），就称为兄弟组件。</p>
-<p>这里有两种实现方式：<br>方式一：</p>
-<p>　　按照React单向数据流方式，我们需要借助父组件进行传递，通过父组件回调函数改变兄弟组件的props。</p>
-<p>　　其实这种实现方式与子组件更新父组件状态的方式是大同小异的。</p>
-<p>方式二：</p>
-<p>　　方式一只适用于组件层次很少的情况，当组件层次很深的时候，整个沟通的效率就会变得很低</p>
-<p>　　 在这里，React官方给我们提供了一种上下文方式，可以让子组件直接访问祖先的数据或函数，无需从祖先组件一层层地传递数据到子组件中。</p>
-<p>　　 但这种方法建议按需使用，可能会导致一些不可预期的错误。（比如数据传递逻辑结构不清晰）</p>
-<pre><code>在这里直接贴出例子：
-</code></pre><pre><code>var Son = React.createClass({
-    render: function(){
-        return(
-            &lt;div&gt;
-                {this.props.text}
-                &lt;botton onClick={this.context.refresh}&gt;更新父组件&lt;/botton&gt;
-            &lt;/div&gt;
-        )
-    }
-});
-var Box = React.createClass({
-    getInitialState: function(){
-        ...
-    },
-    getChildContext: function(){
-        return{
-            refresh: this.refresh()
-        }
-    },
-    refresh: function(){
-        return: function(e){
-            this.setSate({
-                text:&apos;跨级组件通信成功&apos;
-            })
-        }
-    },
-    return: function(){
-        var data = this.props.data;//指的是Box组件中的属性
-        var text = this.state.text;
-        return(
-            &lt;div&gt;
-                &lt;div data={data}&gt;&lt;/div&gt;
-                &lt;Son text={this.state.text}&gt;&lt;/Son&gt;
-            &lt;/div&gt;
-        )
-    }
-})
-Box.childContextType = {
-    refresh: React.PropTypes.any,
-    text: React.PropTypes.any
-}
-</code></pre><p>首先要对使用对象进行说明，Box.childContextType就是这样一个上下文声明，子组件调用祖先组件的方法时，</p>
-<p>　　通过 this.context.[callback] 这样就可以进行祖先与子组件间的沟通了。</p>
-<p>　　总结：今天在这里总结了单向数据流的概念与组件间的沟通，希望大家看后能对React一些基本原理有更深的理解，有错误的地方私信我，我改正。</p>
+<p>7、shouldComponentUpdate(nextProps, nextState)<br>    react性能优化非常重要的一环。组件接受新的state或者props时调用，我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false阻止更新，因为相同的属性状态一定会生成相同的dom树，这样就不需要创造新的dom树和旧的dom树进行diff算法对比，节省大量性能，尤其是在dom结构复杂的时候</p>
+<p>8、componentWillUpdata(nextProps, nextState)<br>    组件初始化时不调用，只有在组件将要更新时才调用，此时可以修改state</p>
+<p>9、render()<br>    组件渲染</p>
+<p>10、componentDidUpdate()<br>    组件初始化时不调用，组件更新完成后调用，此时可以获取dom节点。</p>
+<ul>
+<li>卸载<br>11、componentWillUnmount()<br>  组件将要卸载时调用，一些事件监听和定时器需要在此时清除。</li>
+</ul>
+<h2 id="装载过程"><a href="#装载过程" class="headerlink" title="装载过程"></a>装载过程</h2><pre><code>该过程会依次调用如下函数：
+</code></pre><ul>
+<li><code>constructor()</code>:ES6类的构造函数（为了初始化state或绑定this）</li>
+<li><code>getInitialState()</code>:ES5中初始化state。</li>
+<li><code>getDefaultProps()</code>:ES5中初始化props。在ES6中使用defaultProps()方法。</li>
+<li><code>componentWillMount()</code>:在组件被挂载前调用。只执行一次。</li>
+<li><code>render()</code>:渲染组件，必须实现该方法。</li>
+<li><code>componentDidMount()</code>:在组件装载后调用。这时已经生成了真实的DOM节点。只执行一次。</li>
+</ul>
+<h2 id="更新过程"><a href="#更新过程" class="headerlink" title="更新过程"></a>更新过程</h2><p>当组件的props或者state改变时就会触发组件的更新过程。<br>更新过程会依次执行如下函数：</p>
+<ul>
+<li><code>componentWillReceiveProps(nextProps)</code>:当父组件的render()方法执行后就会触发该方法。初始化时不调用。</li>
+<li><code>shouldComponentUpdate(nextProps,nextState)</code>:当<code>props</code>改变或<code>state</code>改变时调用，初始化时不掉用，返回<code>boolean</code>。<code>true</code>表示继续执行render方法，<code>fasle</code>表示放弃本次渲染。</li>
+<li><code>render()</code>:渲染组件。</li>
+</ul>
+<h2 id="卸载过程"><a href="#卸载过程" class="headerlink" title="卸载过程"></a>卸载过程</h2><p><code>componentWillUnmount()</code>:将组件从DOM树移出，防止内存溢出。</p>
+<h2 id="组件调用"><a href="#组件调用" class="headerlink" title="组件调用"></a>组件调用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App.js'</span></div><div class="line"><span class="keyword">import</span> &#123;render&#125; <span class="keyword">from</span> <span class="string">'mirrorx'</span></div><div class="line"></div><div class="line"><span class="comment">// 启动 app，render 方法是加强版的 ReactDOM.render</span></div><div class="line">render(&lt;App/&gt;, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>))</div></pre></td></tr></table></figure>
+<h2 id="组件定义"><a href="#组件定义" class="headerlink" title="组件定义"></a>组件定义</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> mirror, &#123; actions, connect, render &#125; <span class="keyword">from</span> <span class="string">'mirrorx'</span></div><div class="line"></div><div class="line"><span class="comment">// 声明 Redux state, reducer 和 action，</span></div><div class="line"><span class="comment">// 所有的 action 都会以相同名称赋值到全局的 actions 对象上</span></div><div class="line">mirror.model(&#123;</div><div class="line">    name: <span class="string">'app'</span>,</div><div class="line">    initialState: <span class="number">0</span>,</div><div class="line">    reducers: &#123;</div><div class="line">        increment(state) &#123; <span class="keyword">return</span> state + <span class="number">1</span> &#125;,</div><div class="line">        decrement(state) &#123; <span class="keyword">return</span> state - <span class="number">1</span> &#125;</div><div class="line">    &#125;,</div><div class="line">    effects: &#123;</div><div class="line">        <span class="keyword">async</span> incrementAsync() &#123;</div><div class="line">            <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">                setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">                    resolve()</div><div class="line">                &#125;, <span class="number">1000</span>)</div><div class="line">            &#125;)</div><div class="line">            actions.app.increment()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(props)&#123;</div><div class="line">        <span class="keyword">super</span>(props)</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---初始化组件---"</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    componentWillMount()&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---组件挂载前---"</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    componentDidMount()&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---组件挂载后---"</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    componentWillReceiveProps(nextProps)&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---父组件重新渲染---"</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    shouldComponentUpdate(nextProps,nextState)&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---组件接受到重绘状态---"</span>)</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.props != nextProps || <span class="keyword">this</span>.state != nextState)</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"---组件渲染---"</span>)</div><div class="line">        <span class="keyword">const</span> props = <span class="keyword">this</span>.props </div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;h1&gt;&#123;props.count&#125;&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">                &#123;/</span>* 调用 actions 上的方法来 dispatch action *<span class="regexp">/&#125;</span></div><div class="line"><span class="regexp">                &lt;button onClick=&#123;() =&gt; actions.app.decrement()&#125; style=&#123;&#123; margin: "5px" &#125;&#125;&gt;-&lt;/</span>button&gt;</div><div class="line">                &lt;button onClick=&#123;() =&gt; actions.app.increment()&#125; style=&#123;&#123; <span class="attr">margin</span>: <span class="string">"5px"</span> &#125;&#125;&gt;+&lt;/button&gt;</div><div class="line">                &#123;<span class="comment">/* dispatch async action */</span>&#125;</div><div class="line">                &lt;button onClick=&#123;() =&gt; actions.app.incrementAsync()&#125; style=&#123;&#123; <span class="attr">margin</span>: <span class="string">"5px"</span> &#125;&#125;&gt;+ Async&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">            &lt;/</span>div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        count: state.app</div><div class="line">    &#125;</div><div class="line">&#125;)(App)</div></pre></td></tr></table></figure>
 
       
 
@@ -315,7 +275,7 @@ Box.childContextType = {
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/React数据流和组件间的通信总结/" class="article-tag-list-link color3">React数据流和组件间的通信总结</a>
+        			<a href="/categories/React生命周期详解/" class="article-tag-list-link color2">React生命周期详解</a>
         		</li>
       		
 		</ul>
@@ -370,7 +330,7 @@ Box.childContextType = {
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yaochuxia.github.io/2017/10/30/React数据流和组件间的通信总结/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yaochuxia.github.io/2017/12/13/React生命周期详解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -384,18 +344,18 @@ Box.childContextType = {
   
 <nav id="article-nav">
   
-    <a href="/2017/12/13/React生命周期详解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/14/ES6-学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          React生命周期详解
+          ES6 学习笔记
         
       </div>
     </a>
   
   
-    <a href="/2017/10/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/10/30/React数据流和组件间的通信总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React数据流和组件间的通信总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
